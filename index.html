@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Digital Social Researcher</title>
+
+  <!-- 引入 Google 字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=Special+Elite&family=Caveat:wght@400;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating Navigation -->
+<header class="site-nav" id="siteNav">
+  <a href="#top" class="nav-brand" aria-label="Back to top">
+    <svg class="brand-girl-logo" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <!-- 背景圆 -->
+      <circle cx="48" cy="48" r="42" fill="#F5F1E8" stroke="#A8B58A" stroke-width="1.8"/>
+
+      <!-- 微卷长发后层 -->
+      <path d="M28 67
+               C21 54, 24 34, 31 25
+               C37 16, 51 13, 63 21
+               C76 30, 75 51, 68 67
+               C64 76, 59 80, 55 82
+               C58 71, 56 58, 53 47
+               C48 53, 39 52, 34 47
+               C32 58, 31 72, 34 82
+               C31 80, 29 74, 28 67Z"
+            fill="#2C241D"/>
+
+      <!-- 头发高光线 -->
+      <path d="M35 31 C41 24, 53 23, 61 31"
+            fill="none" stroke="#5A4634" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+      <path d="M31 42 C27 52, 27 64, 31 73"
+            fill="none" stroke="#5A4634" stroke-width="1.3" stroke-linecap="round" opacity="0.65"/>
+      <path d="M65 42 C69 52, 69 64, 65 73"
+            fill="none" stroke="#5A4634" stroke-width="1.3" stroke-linecap="round" opacity="0.65"/>
+      <path d="M38 25 C36 35, 34 42, 30 48"
+            fill="none" stroke="#6B523C" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+      <path d="M58 25 C60 35, 62 42, 66 48"
+            fill="none" stroke="#6B523C" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+
+      <!-- 脸 -->
+      <path d="M32 42
+               C32 30, 39 23, 48 23
+               C57 23, 64 30, 64 42
+               C64 55, 57 63, 48 63
+               C39 63, 32 55, 32 42Z"
+            fill="#F0D3B7"/>
+
+      <!-- 刘海 -->
+      <path d="M30 39
+               C33 28, 39 22, 48 22
+               C57 22, 63 28, 66 39
+               C59 36, 53 30, 48 27
+               C43 31, 38 36, 30 39Z"
+            fill="#2C241D"/>
+      <path d="M48 24 C46 30, 43 35, 38 38"
+            fill="none" stroke="#4B382A" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M49 24 C52 31, 56 35, 62 38"
+            fill="none" stroke="#4B382A" stroke-width="1.4" stroke-linecap="round"/>
+
+      <!-- 耳朵 -->
+      <circle cx="31.5" cy="44" r="3.2" fill="#F0D3B7"/>
+      <circle cx="64.5" cy="44" r="3.2" fill="#F0D3B7"/>
+
+      <!-- 眼睛 -->
+      <circle cx="42" cy="44" r="2.1" fill="#2C2A26"/>
+      <circle cx="54" cy="44" r="2.1" fill="#2C2A26"/>
+      <circle cx="42.7" cy="43.2" r="0.55" fill="#FFFFFF"/>
+      <circle cx="54.7" cy="43.2" r="0.55" fill="#FFFFFF"/>
+
+      <!-- 腮红 -->
+      <circle cx="37" cy="50" r="3" fill="#D99C8C" opacity="0.45"/>
+      <circle cx="59" cy="50" r="3" fill="#D99C8C" opacity="0.45"/>
+
+      <!-- 微笑 -->
+      <path d="M43 52 C45 55, 51 55, 53 52"
+            fill="none" stroke="#2C2A26" stroke-width="1.7" stroke-linecap="round"/>
+
+      <!-- 身体 / 衣服 -->
+      <path d="M28 83
+               C31 70, 38 64, 48 64
+               C58 64, 65 70, 68 83Z"
+            fill="#DCC290"/>
+
+      <!-- 手臂 -->
+      <path d="M35 68 C39 75, 43 78, 48 78"
+            fill="none" stroke="#F0D3B7" stroke-width="6" stroke-linecap="round"/>
+      <path d="M61 68 C57 75, 53 78, 48 78"
+            fill="none" stroke="#F0D3B7" stroke-width="6" stroke-linecap="round"/>
+
+      <!-- 小花盆 -->
+      <path d="M40 72 H56 L53 84 H43Z" fill="#B99562"/>
+      <rect x="39" y="70" width="18" height="4" rx="1" fill="#9B7A4F"/>
+
+      <!-- 小植物 -->
+      <path d="M48 70 C48 62, 48 56, 48 51"
+            fill="none" stroke="#6E8B56" stroke-width="2" stroke-linecap="round"/>
+      <path d="M48 61 C43 56, 39 57, 37 62 C42 64, 46 64, 48 61Z"
+            fill="#6E8B56"/>
+      <path d="M49 56 C54 51, 59 52, 61 57 C56 60, 52 60, 49 56Z"
+            fill="#7A8B5C"/>
+    </svg>
+
+    <span class="nav-name">Junhui</span>
+  </a>
+
+  <nav class="nav-links" aria-label="Main navigation">
+  <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+  <a href="#journey" class="nav-link" data-i18n="nav.journey">Journey</a>
+  <a href="#built" class="nav-link" data-i18n="nav.built">Built</a>
+  <a href="#research" class="nav-link" data-i18n="nav.research">Research</a>
+  <a href="#leadership" class="nav-link" data-i18n="nav.leadership">Leadership</a>
+  <a href="#toolkit" class="nav-link" data-i18n="nav.toolkit">Toolkit</a>
+  <a href="#off-record" class="nav-link" data-i18n="nav.offRecord">Off Record</a>
+  <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+  <button id="lang-toggle" class="lang-toggle">中</button>
+</nav>
+</header>
+
+<div class="page">
+
+  <!-- 区块 1：Hero 首屏 -->
+  <section id="top" class="hero section">
+    <div class="hero-left">
+      <span class="tag" data-i18n="hero.tag">✦ AI Product Explorer</span>
+      <h1 data-i18n="hero.name">
+        Hi, I'm<br>
+        <span class="name-italic">Junhui.</span>
+      </h1>
+      <p class="subtitle" data-i18n="hero.subtitle">
+        <b>Economist</b> by training, <b>behavioral scientist</b> by research,
+        <b>product builder</b> by obsession — and a storyteller along the way.
+      </p>
+
+      <div class="role-block">
+        <div class="role-line">
+          <span class="role-dot"></span>
+          <span class="role-text" id="typewriter"></span><span class="cursor"></span>
+        </div>
+        <p class="craft-line" data-i18n="hero.craft">
+          Where <b>numbers</b> meet <b>narratives</b>, and <b>research</b> meets <b>real people</b>.
+        </p>
+        <div class="sig-row">
+          <span class="item" data-i18n="hero.sig1">Economics & Finance</span>
+          <span class="sep">·</span>
+          <span class="item" data-i18n="hero.sig2">Behavioral Science</span>
+        </div>
+      </div>
+
+      <a href="images/resume.pdf" download class="btn-primary" data-i18n="hero.btn">
+        <span>⬇</span> Download Resume
+      </a>
+    </div>
+
+    <!-- 中间装饰区：竖线 + 引用卡 + 滚动提示 -->
+    <div class="hero-middle">
+      <div class="deco-dot"></div>
+      <div class="deco-line"></div>
+
+      <div class="quote-card">
+        <div class="quote-mark">"</div>
+        <p class="quote-text" data-i18n="hero.quote">
+          Curious about people,<br>
+          obsessed with <em>trying</em>.
+        </p>
+      </div>
+
+      <div class="deco-line"></div>
+      <div class="scroll-hint">
+        <span data-i18n="hero.scroll">scroll</span>
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="photo-frame"></div>
+
+      <!-- 左上：手写便签风 -->
+      <div class="sticky-note-card note-1">
+        <div class="tape"></div>
+        <div class="note-label" data-i18n="hero.note.label">Now Building</div>
+        <div class="note-title">AutoApplyClaw</div>
+        <div class="note-sub" data-i18n="hero.note.sub">AI Job Copilot 🚀</div>
+      </div>
+
+      <!-- 右下：明信片票根风 -->
+      <div class="postcard note-2">
+        <div class="postcard-dot"></div>
+        <div class="postcard-row">
+          <span class="postcard-label">NUS</span>
+          <span class="postcard-divider">·</span>
+          <span class="postcard-title" data-i18n="hero.postcard.title">Singapore</span>
+        </div>
+        <div class="postcard-sub" data-i18n="hero.postcard.sub">Behavior × Data × AI</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 区块 2：About Me -->
+  <section id="about" class="section about">
+    <div class="about-inner">
+
+      <!-- 左侧：照片 + 手写便签 -->
+      <div class="about-image">
+        <div class="about-photo"></div>
+        <div class="about-sticky">
+          <div class="about-sticky-tape"></div>
+          <p data-i18n="about.sticky">"It started with people."</p>
+        </div>
+      </div>
+
+      <!-- 右侧：正文 -->
+      <div class="about-text">
+        <div class="about-eyebrow">
+          <span class="about-eyebrow-line"></span>
+          <span class="about-eyebrow-label" data-i18n="about.eyebrow">02 — About Me</span>
+        </div>
+
+        <h2 class="about-title" data-i18n="about.title">The <em>why</em> behind the work.</h2>
+
+        <p data-i18n="about.p1">
+          I started in <b>Economics and Finance</b>, where I learned to think
+          in systems, structure problems, and work with data. But somewhere
+          between the spreadsheets and the regression tables, a different
+          question started pulling at me — not <em>how</em> decisions are made,
+          but <em>why</em> people make them.
+        </p>
+
+        <p data-i18n="about.p2">
+          That curiosity led me to <b>Behavioural Science</b>. I'm now
+          pursuing my master's at the <b>National University of Singapore</b>,
+          studying how human behaviour, context, and evidence can shape
+          better interventions — and better products.
+        </p>
+
+        <p data-i18n="about.p3">
+          Across research, product experiments, and AI tools, I care most
+          about <b>turning insight into something useful</b>. Whether I'm
+          cleaning a dataset, testing a workflow, or decoding user behaviour,
+          I'm after the same thing: <em>understanding people well enough to
+          design with both empathy and clarity.</em>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 区块 3：Journey -->
+  <section id="journey" class="section journey">
+    <div class="journey-header">
+      <div class="journey-eyebrow">
+        <span class="journey-eyebrow-line"></span>
+        <span class="journey-eyebrow-label" data-i18n="journey.eyebrow">03 — Journey</span>
+      </div>
+      <h2 class="journey-title" data-i18n="journey.title">Where I've <em>grown</em>.</h2>
+      <p class="journey-sub" data-i18n="journey.sub">
+        A timeline of the places that shaped how I think — and what I build.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- 01: XJTLU 本科 -->
+      <div class="tl-item tl-left" data-num="01">
+        <div class="tl-dot"></div>
+        <span class="tl-tagline" data-i18n="journey.01.tagline">Foundations</span>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-num">01</span>
+            <span class="tl-date">2021.09 — 2025.07</span>
+          </div>
+          <h3 class="tl-place" data-i18n="journey.01.place">Xi'an Jiaotong-Liverpool University</h3>
+          <p class="tl-role" data-i18n="journey.01.role">BSc · Economics &amp; Finance</p>
+          <div class="tl-highlight">
+            <span>GPA 3.67 / 4.0</span>
+            <span class="tl-dot-sep">·</span>
+            <span>Top 15%</span>
+          </div>
+          <p class="tl-body" data-i18n="journey.01.body">
+            A quantitative foundation in <b>Econometrics</b>,
+            <b>Statistics</b>, <b>Mathematical Economics</b>,
+            and <b>Financial Instruments</b> — the toolkit that still
+            shapes how I frame problems today.
+          </p>
+        </div>
+      </div>
+
+      <!-- 02: SURF -->
+      <div class="tl-item tl-right" data-num="02">
+        <div class="tl-dot"></div>
+        <span class="tl-tagline" data-i18n="journey.02.tagline">First scale</span>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-num">02</span>
+            <span class="tl-date">2023.06 — 2023.09</span>
+          </div>
+          <h3 class="tl-place" data-i18n="journey.02.place">XJTLU Summer Research Program (SURF)</h3>
+          <p class="tl-role" data-i18n="journey.02.role">Team Lead · Undergraduate Research</p>
+          <div class="tl-highlight tl-highlight-award" data-i18n="journey.02.award">
+            🏆 1st Place · IBSS Business School Competition
+          </div>
+          <p class="tl-body" data-i18n="journey.02.body">
+            <em>"Officials' Corruption, Political Connections, and Corporate Innovation."</em>
+            Built an automated pipeline with <b>Python + ChatGPT API +
+            Baidu Maps API</b> to compile <b>10,000+ records</b> of city-level
+            official data — my first taste of how code turns a research
+            question into scale.
+          </p>
+        </div>
+      </div>
+
+      <!-- 03: NUS MSc -->
+      <div class="tl-item tl-left" data-num="03">
+        <div class="tl-dot tl-dot-current"></div>
+        <span class="tl-tagline" data-i18n="journey.03.tagline">Behavior, by design</span>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-num">03</span>
+            <span class="tl-date">2025.08 — 2027.01</span>
+            <span class="tl-badge" data-i18n="journey.03.badge">Now</span>
+          </div>
+          <h3 class="tl-place" data-i18n="journey.03.place">National University of Singapore</h3>
+          <p class="tl-role" data-i18n="journey.03.role">MSc · Behavioral and Implementation Science in Health</p>
+          <div class="tl-highlight">
+            <span>GPA 4.58 / 5.0</span>
+          </div>
+          <p class="tl-body" data-i18n="journey.03.body">
+            Diving into <b>Behavioral Decision Science</b>,
+            <b>Implementation Science Methods</b>, and
+            <b>Program Evaluation</b> — learning how evidence becomes
+            action, and how to design interventions that actually change
+            what people do.
+          </p>
+        </div>
+      </div>
+
+      <!-- 04: NUS Thesis -->
+      <div class="tl-item tl-right" data-num="04">
+        <div class="tl-dot tl-dot-current"></div>
+        <span class="tl-tagline" data-i18n="journey.04.tagline">Patterns in people</span>
+        <div class="tl-card">
+          <div class="tl-meta">
+            <span class="tl-num">04</span>
+            <span class="tl-date">2025 — Present</span>
+            <span class="tl-badge tl-badge-soft" data-i18n="journey.04.badge">Manuscript in prep</span>
+          </div>
+          <h3 class="tl-place" data-i18n="journey.04.place">NUS Master's Thesis</h3>
+          <p class="tl-role" data-i18n="journey.04.role">Project Lead · Longitudinal Behavioral Research</p>
+          <div class="tl-highlight" data-i18n="journey.04.highlight">
+            Latent Class Analysis · NHATS · 14-Wave Panel
+          </div>
+          <p class="tl-body" data-i18n="journey.04.body">
+            Building a reproducible panel from <b>14 waves of NHATS data</b>,
+            using <b>Latent Class Analysis</b> to identify caregiver
+            behavior clusters and surface where interventions could
+            actually make a difference. Manuscript in preparation.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 区块 4：Things I've Built -->
+  <section id="built" class="section built">
+    <div class="built-header">
+      <div class="built-eyebrow">
+        <span class="built-eyebrow-line"></span>
+        <span class="built-eyebrow-label" data-i18n="built.eyebrow">04 — Things I've Built</span>
+      </div>
+      <h2 class="built-title" data-i18n="built.title">Things I <em>make</em>. Things I <em class="em-underline">ship</em>.</h2>
+      <p class="built-sub" data-i18n="built.sub">
+        Products, research, and experiments — where curiosity meets execution.
+      </p>
+    </div>
+
+    <!-- 🌟 FLAGSHIP: AutoApplyClaw -->
+    <div class="flagship-card">
+      <div class="flagship-left">
+        <span class="flagship-tag" data-i18n="built.aac.tag">✦ Flagship · Co-founding Team</span>
+        <h3 class="flagship-title">AutoApplyClaw</h3>
+        <p class="flagship-sub" data-i18n="built.aac.sub">AI-native Job Application Copilot</p>
+        <p class="flagship-desc" data-i18n="built.aac.desc">
+          From job search chaos to <b>one-click apply</b>. I led the pivot
+          from a generic "job pool" to a focused copilot —
+          <b>JD → Tailored CV + CL → One-click Autofill</b>.
+        </p>
+        <div class="flagship-chips" data-i18n="built.aac.chips">
+          <span class="chip">Product Strategy</span>
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">Chrome Extension</span>
+          <span class="chip">30+ Prompt Tests</span>
+          <span class="chip">20+ Iterations</span>
+        </div>
+        <button class="flagship-cta story-trigger" type="button" data-i18n="built.aac.cta">
+            Read the story <span class="arrow">→</span>
+        </button>
+      </div>
+      <div class="flagship-right">
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="browser-url">
+              <span class="url-lock">🔒</span>
+              <span class="url-text">autoapplyclaw.com</span>
+            </div>
+          </div>
+          <div class="browser-content">
+            <img src="images/autoapplyclaw.png" alt="AutoApplyClaw Homepage" class="browser-screenshot">
+          </div>
+          <div class="browser-badge">
+            <span class="badge-dot"></span>
+            <span data-i18n="built.aac.launch">Launching soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🔬 RESEARCH & INSIGHT 分割线 -->
+    <div class="built-divider">
+        <span class="built-divider-line"></span>
+        <span class="built-divider-label" data-i18n="built.divider">🔬 Research & Insight</span>
+        <span class="built-divider-line"></span>
+    </div>
+
+    <!-- 🔬 RESEARCH: AI Social Products -->
+<a href="https://www.xiaohongshu.com/user/profile/69185146000000003700a835" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="flagship-card research-card">
+  <div class="flagship-left">
+    <span class="flagship-tag" data-i18n="built.ai.tag">◆ Independent Research</span>
+    <h3 class="flagship-title" data-i18n="built.ai.title">AI Social Products</h3>
+    <p class="flagship-sub" data-i18n="built.ai.sub">User Search Behavior & Growth Experiment</p>
+    <p class="flagship-desc" data-i18n="built.ai.desc">
+      Mapped user journeys across AI companion apps, identified
+      <b>5 core pain points</b>, and validated findings through
+      <b>content experiments on Xiaohongshu</b> — translating research
+      into posts that earned <b>10K+ organic views</b>.
+    </p>
+    <div class="flagship-chips" data-i18n="built.ai.chips">
+      <span class="chip">Competitive Analysis</span>
+      <span class="chip">User Journey</span>
+      <span class="chip">10K+ Views</span>
+      <span class="chip">Xiaohongshu</span>
+    </div>
+    <span class="flagship-cta" data-i18n="built.ai.cta">Visit my Xiaohongshu <span class="arrow">→</span></span>
+  </div>
+  
+  <div class="flagship-right">
+    <!-- 小红书爆款卡片双图错位 -->
+    <div class="xhs-stack">
+      <!-- 底层卡片（虚化背景，暗示"不止一篇"）-->
+      <div class="xhs-card xhs-card-back">
+        <img src="images/xhs-hit-post-2.png" alt="Xiaohongshu hit post 2" class="xhs-card-img">
+      </div>
+      <!-- 主卡片 -->
+      <div class="xhs-card xhs-card-front">
+        <img src="images/xhs-hit-post.png" alt="Xiaohongshu hit post" class="xhs-card-img">
+      </div>
+      <!-- 角标 -->
+      <div class="xhs-badge">
+        <span class="badge-dot"></span>
+        <span data-i18n="built.ai.badge">Top Post · 10K+ Views</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+    <!-- 💼 Healthcare Equity Research -->
+<div class="flagship-card industry-card">
+  <div class="flagship-left">
+    <span class="flagship-tag" data-i18n="built.hc.tag">◆ Hua’an Securities · 2024</span>
+    <h3 class="flagship-title" data-i18n="built.hc.title">Healthcare Equity Research</h3>
+    <p class="flagship-sub" data-i18n="built.hc.sub">Medical & Vaccine Sector · Research Intern</p>
+    <p class="flagship-desc" data-i18n="built.hc.desc">
+      <span class="capability-hook">Data → Narrative.</span>
+      At Hua’an Securities, I worked with fragmented vaccine batch-issuance data
+      across <b>12 provinces</b> and turned it into structured supply-demand analysis
+      for the medical and vaccine sector. I also broke down the financial and
+      operating indicators of <b>three listed companies</b>, produced a
+      <b>20-page analytical report</b>, and contributed to <b>eight research notes</b>
+      whose readership increased by <b>20%</b> compared with previous releases.
+      <br><br>
+      What stayed with me was the workflow: clean messy signals, find the pattern,
+      build a narrative, and present it clearly enough to support judgment. That
+      same habit now shapes how I approach product research: from scattered user
+      and market signals to a sharper story of what matters.
+    </p>
+    <div class="flagship-chips" data-i18n="built.hc.chips">
+      <span class="chip">Research Mindset</span>
+      <span class="chip">Data Storytelling</span>
+    </div>
+  </div>
+</div>
+
+    <!-- 💼 Investment Research Support -->
+    <div class="flagship-card industry-card">
+    <div class="flagship-left">
+        <span class="flagship-tag" data-i18n="built.inv.tag">◆ Minsheng Securities · 2023</span>
+        <h3 class="flagship-title" data-i18n="built.inv.title">Investment Research Support</h3>
+        <p class="flagship-sub" data-i18n="built.inv.sub">Summer Intern</p>
+        <p class="flagship-desc" data-i18n="built.inv.desc">
+        <span class="capability-hook">Structured Listening.</span>
+        At Minsheng Securities, I synthesized <b>20+ internal meeting notes</b>,
+        client communication records, and daily investment research materials. I
+        learned to separate signal from noise: what the client actually cared about,
+        what the team needed to decide, and what information had to be made clearer
+        before a recommendation could move forward.
+        <br><br>
+        I also supported client expansion work by preparing investment PPTs and
+        product suggestions for fixed-income and FOF products. Looking back, this was
+        my first practical training in user-facing communication: listen carefully,
+        structure the need, and turn scattered information into something people can
+        act on.
+        </p>
+        <div class="flagship-chips" data-i18n="built.inv.chips">
+        <span class="chip">Client Communication</span>
+        <span class="chip">Research Synthesis</span>
+        <span class="chip">Investment PPT</span>
+        </div>
+    </div>
+    </div>
+
+    <!-- 底部 CTA：跳转到完整简历 -->
+    <div class="section-cta-wrap">
+    <a href="images/resume.pdf" target="_blank" class="section-cta" data-i18n="built.cta">
+        View full resume <span class="arrow">→</span>
+    </a>
+    </div>
+
+    </section>
+
+  <!-- 区块 5：Research & Inquiry -->
+  <section id="research" class="section research">
+    <div class="research-header">
+      <div class="research-eyebrow">
+        <span class="research-eyebrow-line"></span>
+        <span class="research-eyebrow-label" data-i18n="research.eyebrow">05 — Research &amp; Inquiry</span>
+      </div>
+      <h2 class="research-title" data-i18n="research.title">Where I learn to <em>ask</em> better questions.</h2>
+      <p class="research-sub" data-i18n="research.sub">
+        Four projects across behavioral science, corporate finance, political economy, and green finance —
+        each one a different kind of evidence, a different kind of method.
+      </p>
+    </div>
+
+    <div class="research-grid">
+
+      <!-- Card 1: NUS Thesis -->
+      <article class="research-card">
+        <div class="research-card-top">
+          <div class="research-meta">
+            <span class="research-date" data-i18n="research.01.date">2025.08 — Now</span>
+            <span class="research-status status-active" data-i18n="research.01.status">● In Progress</span>
+          </div>
+          <span class="research-tag" data-i18n="research.01.tag">MSc Thesis · NUS</span>
+        </div>
+        <h3 class="research-card-title" data-i18n="research.01.title">Caregiver Patterns in <em>Aging Populations</em></h3>
+        <p class="research-card-sub" data-i18n="research.01.sub">Caregiver Health × Behavioral Heterogeneity</p>
+        <p class="research-card-desc" data-i18n="research.01.desc">
+          Built a reproducible panel from <b>14 waves of NHATS data (2011–2024)</b>,
+          then used <b>Latent Class Analysis</b> to identify hidden subgroups of caregivers —
+          turning behavioral indicators into a "population × driver × intervention opportunity" framework.
+        </p>
+        <div class="research-chips" data-i18n="research.01.chips">
+          <span class="r-chip">STATA</span>
+          <span class="r-chip">Latent Class Analysis</span>
+          <span class="r-chip">Panel Data</span>
+          <span class="r-chip">Behavioral Indicators</span>
+        </div>
+        <p class="research-reflection" data-i18n="research.01.reflection">
+          "Good research starts when messy human behavior becomes a pattern we can act on."
+        </p>
+      </article>
+
+      <!-- Card 2: Undergraduate Thesis -->
+      <article class="research-card">
+        <div class="research-card-top">
+          <div class="research-meta">
+            <span class="research-date">2024 — 2025</span>
+          </div>
+          <span class="research-tag" data-i18n="research.02.tag">BSc Thesis · XJTLU</span>
+        </div>
+        <h3 class="research-card-title" data-i18n="research.02.title">Does the Two-Child Policy Erode <em>Women's Bargaining Power?</em></h3>
+        <p class="research-card-sub" data-i18n="research.02.sub">Gender Economics × Corporate Finance</p>
+        <p class="research-card-desc" data-i18n="research.02.desc">
+          Used <b>Entropy Balancing + DID</b> on 2010–2020 Chinese listed-firm data to
+          examine how the Two-Child Policy affected women's wage share and whether changes
+          in bargaining power were linked to firm performance.
+          The analysis also tested whether stronger <b>CSR</b> practices helped buffer
+          these effects.
+        </p>
+        <div class="research-chips" data-i18n="research.02.chips">
+          <span class="r-chip">Entropy Balancing</span>
+          <span class="r-chip">DID</span>
+          <span class="r-chip">Gender Pay Share</span>
+          <span class="r-chip">CSR Moderation</span>
+        </div>
+        <p class="research-reflection" data-i18n="research.02.reflection">
+          "Standing on the shoulders of prior literature, I found the most exciting step was to give it one new variable of my own."
+        </p>
+      </article>
+
+      <!-- Card 3: SURF -->
+      <article class="research-card">
+        <div class="research-card-top">
+          <div class="research-meta">
+            <span class="research-date">2023.06 — 2023.09</span>
+            <span class="research-status status-award" data-i18n="research.03.status">🏆 1st Place</span>
+          </div>
+          <span class="research-tag" data-i18n="research.03.tag">Summer Research · Team Lead</span>
+        </div>
+        <h3 class="research-card-title" data-i18n="research.03.title">Officials' Corruption, Political Ties &amp; <em>Corporate Innovation</em></h3>
+        <p class="research-card-sub" data-i18n="research.03.sub">IBSS Business School Competition · Winner</p>
+        <p class="research-card-desc" data-i18n="research.03.desc1">
+        Led a summer research team on political ties and corporate innovation,
+        designing the research framework and structuring variables around policy
+        environment, firm innovation performance, and institutional factors.
+    </p>
+
+    <p class="research-card-desc" data-i18n="research.03.desc2">
+        Built a Python automation pipeline that collected and processed
+        <b>10,000+ city-level official records</b>, integrating <b>ChatGPT API</b>
+        for information structuring and <b>Baidu Maps API</b> for geographic
+        parsing. The workflow turned a manual coding task into a cleaner, scalable
+        dataset for staged analysis and presentation.
+    </p>
+        <div class="research-chips" data-i18n="research.03.chips">
+          <span class="r-chip">Python Automation</span>
+          <span class="r-chip">ChatGPT API</span>
+          <span class="r-chip">Baidu Maps API</span>
+          <span class="r-chip">Web Scraping</span>
+        </div>
+        <p class="research-reflection" data-i18n="research.03.reflection">
+          My first taste of how a few lines of code can turn a research question into scale.
+        </p>
+      </article>
+
+      <!-- Card 4: ESG -->
+      <article class="research-card">
+        <div class="research-card-top">
+          <div class="research-meta">
+            <span class="research-date">2023.05 — 2023.09</span>
+          </div>
+          <span class="research-tag" data-i18n="research.04.tag">Mentor-Led Research · Member</span>
+        </div>
+        <h3 class="research-card-title" data-i18n="research.04.title">ESG Finance &amp; the Path to <em>Carbon Neutrality</em></h3>
+        <p class="research-card-sub" data-i18n="research.04.sub">Green Bonds · Carbon Trading · ESG & Carbon Finance</p>
+        <p class="research-card-desc" data-i18n="research.04.desc">
+        Reviewed 7+ Chinese and English sources weekly on China's
+        <b>dual-carbon policy framework</b>, green bonds and
+        carbon-emission trading, contributing to a
+        <b>6,000+ word literature review</b> and a
+        <b>9,000+ word team research report</b> on
+        <b>ESG and carbon finance</b>. Through company visits,
+        mentor-led discussions and a final presentation at the
+        <b>IP Finance Bi-Weekly Forum</b>, I examined how green finance
+        instruments connect policy targets, market mechanisms and
+        investment decision-making.
+        </p>
+        <div class="research-chips" data-i18n="research.04.chips">
+          <span class="r-chip">Policy Mapping</span>
+          <span class="r-chip">Green Finance</span>
+          <span class="r-chip">ESG Frameworks</span>
+          <span class="r-chip">Industry Briefing</span>
+        </div>
+        <p class="research-reflection" data-i18n="research.04.reflection">
+          Where I first understood how policy targets become financial instruments, market prices and investment narratives.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- 区块 6：Leadership & Grit - Index Page -->
+  <section id="leadership" class="section leadership">
+
+    <!-- Section eyebrow + 标题 -->
+    <div class="leader-index-header">
+      <div class="leader-index-eyebrow">
+        <span class="leader-index-eyebrow-line"></span>
+        <span class="leader-index-eyebrow-label" data-i18n="leader.eyebrow">06 — Leadership &amp; Grit</span>
+      </div>
+      <h2 class="leader-index-title" data-i18n="leader.title">
+        Learning to <em>lead</em> by showing up.
+      </h2>
+      <p class="leader-index-sub" data-i18n="leader.sub">
+         Campus roles that taught me how to coordinate people, represent a community, communicate across groups and take responsibility when small tasks became shared outcomes.
+      </p>
+      <p class="leader-index-hint" data-i18n="leader.hint">
+        <span class="leader-index-hint-arrow">↓</span>
+        click any line to read the chapter
+      </p>
+    </div>
+
+    <!-- 索引列表 -->
+    <ol class="leader-index">
+
+      <!-- i. 团支书 -->
+      <li class="leader-index-item" data-leader-item>
+        <button class="leader-index-row" type="button" aria-expanded="false">
+          <span class="leader-index-num">i.</span>
+          <span class="leader-index-main">
+            <span class="leader-index-name" data-i18n="leader.i.name">Class Youth League Branch Secretary</span>
+            <span class="leader-index-quote" data-i18n="leader.i.quote">Three years of coordination, communication and class-wide follow-through.</span>
+          </span>
+          <span class="leader-index-dots" aria-hidden="true"></span>
+          <span class="leader-index-meta" data-i18n="leader.i.meta">3 yrs · 107 students</span>
+          <span class="leader-index-toggle" aria-hidden="true">+</span>
+        </button>
+
+        <div class="leader-index-panel">
+          <div class="leader-index-panel-inner">
+            <div class="leader-index-panel-tag" data-i18n="leader.i.tag">— Coordination · Long-form</div>
+            <p class="leader-index-panel-body" data-i18n="leader.i.body">
+              Coordinated <b>107 students</b> across <b>13 study groups</b> in
+              three years — ran <b>8 class events</b> at 90%+ attendance,
+              and kept the line between "official notice" and "real conversation" alive.
+            </p>
+            <div class="leader-index-panel-note">
+              <span class="leader-index-panel-note-label" data-i18n="leader.note.label">Margin Note</span>
+              <p data-i18n="leader.i.note">
+                This role taught me that leadership is not only about making decisions;
+                it is also about keeping people informed, aligned and willing to participate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- ii. BSA -->
+      <li class="leader-index-item" data-leader-item>
+        <button class="leader-index-row" type="button" aria-expanded="false">
+          <span class="leader-index-num">ii.</span>
+          <span class="leader-index-main">
+            <span class="leader-index-name" data-i18n="leader.ii.name">BSA Academic Affairs · Core Member</span>
+            <span class="leader-index-quote" data-i18n="leader.ii.quote">Turning academic materials into resources people could actually use.</span>
+          </span>
+          <span class="leader-index-dots" aria-hidden="true"></span>
+          <span class="leader-index-meta" data-i18n="leader.ii.meta">12 papers · 370+ reached</span>
+          <span class="leader-index-toggle" aria-hidden="true">+</span>
+        </button>
+
+        <div class="leader-index-panel">
+          <div class="leader-index-panel-inner">
+            <div class="leader-index-panel-tag" data-i18n="leader.ii.tag">— Academic Service · Resource Curation</div>
+            <p class="leader-index-panel-body" data-i18n="leader.ii.body">
+              Compiled <b>12 papers + 85 pages</b> of finance materials, designed
+              knowledge posters, and co-authored revision guides that reached
+              <b>200+ students</b> and <b>170+ workshop attendees</b> during finals season.
+            </p>
+            <div class="leader-index-panel-note">
+              <span class="leader-index-panel-note-label" data-i18n="leader.note.label">Margin Note</span>
+              <p data-i18n="leader.ii.note">
+                I learned that useful academic support is not about making information longer;
+                it is about making difficult material easier to find, read and act on.
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- iii. Student Ambassador -->
+      <li class="leader-index-item" data-leader-item>
+        <button class="leader-index-row" type="button" aria-expanded="false">
+          <span class="leader-index-num">iii.</span>
+          <span class="leader-index-main">
+            <span class="leader-index-name" data-i18n="leader.iii.name">Outstanding Student Ambassador</span>
+            <span class="leader-index-quote" data-i18n="leader.iii.quote">Representing XJTLU through clear, audience-aware communication.</span>
+          </span>
+          <span class="leader-index-dots" aria-hidden="true"></span>
+          <span class="leader-index-meta" data-i18n="leader.iii.meta">XJTLU · Outreach</span>
+          <span class="leader-index-toggle" aria-hidden="true">+</span>
+        </button>
+
+        <div class="leader-index-panel">
+          <div class="leader-index-panel-inner">
+            <div class="leader-index-panel-tag" data-i18n="leader.iii.tag">— Outreach · Public Communication</div>
+            <p class="leader-index-panel-body" data-i18n="leader.iii.body">
+              Represented XJTLU at admissions events — translating program structures,
+              international curriculum, and "what it actually feels like to study here"
+              for prospective students and parents who'd never set foot on campus.
+            </p>
+            <div class="leader-index-panel-note">
+              <span class="leader-index-panel-note-label" data-i18n="leader.note.label">Margin Note</span>
+              <p data-i18n="leader.iii.note">
+                This role trained me to communicate with both accuracy and empathy: not just
+                answering the question asked, but understanding the concern behind it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- iv. Gaokao Volunteer -->
+      <li class="leader-index-item" data-leader-item>
+        <button class="leader-index-row" type="button" aria-expanded="false">
+          <span class="leader-index-num">iv.</span>
+          <span class="leader-index-main">
+            <span class="leader-index-name" data-i18n="leader.iv.name">Gaokao Info-Session Volunteer</span>
+            <span class="leader-index-quote" data-i18n="leader.iv.quote">Helping students and parents make sense of a stressful transition.</span>
+          </span>
+          <span class="leader-index-dots" aria-hidden="true"></span>
+          <span class="leader-index-meta" data-i18n="leader.iv.meta">'23 — '24 · Recurring</span>
+          <span class="leader-index-toggle" aria-hidden="true">+</span>
+        </button>
+
+        <div class="leader-index-panel">
+          <div class="leader-index-panel-inner">
+            <div class="leader-index-panel-tag" data-i18n="leader.iv.tag">— Volunteer · Recurring</div>
+            <p class="leader-index-panel-body" data-i18n="leader.iv.body">
+              Came back for two consecutive years to support Gaokao information sessions,
+              answering questions from high school students and parents about applications,
+              programme choices and university transition. I learned to give the same core
+              information in different ways, because every family brought a different mix
+              of uncertainty, urgency and hope.
+            </p>
+            <div class="leader-index-panel-note">
+              <span class="leader-index-panel-note-label" data-i18n="leader.note.label">Margin Note</span>
+              <p data-i18n="leader.iv.note">
+                Patience as a craft: the same answer, said differently, is not
+                the same answer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </li>
+
+    </ol>
+
+    <!-- 底部签名 -->
+    <p class="leader-index-signature" data-i18n="leader.signature">
+      — end of chapter vi —
+    </p>
+  </section>
+
+  <!-- 区块 7：Toolkit & Craft - Lab Notebook -->
+  <section id="toolkit" class="section toolkit">
+    <div class="toolkit-header">
+      <div class="toolkit-eyebrow" data-i18n="toolkit.eyebrow">07 — Working Notes</div>
+      <h2 class="toolkit-title" data-i18n="toolkit.title">Toolkit &amp; <em>Craft</em></h2>
+      <p class="toolkit-sub" data-i18n="toolkit.sub">
+        Less a list of tools, more a snapshot of how I actually work — the kinds of
+        problems each instrument shows up for.
+      </p>
+    </div>
+
+    <div class="notebook">
+      <div class="notebook-holes">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="notebook-top">
+        <div class="notebook-meta">
+          <span class="notebook-meta-title">LAB NOTEBOOK · VOL. III</span>
+          <span>Working methods · How I think with tools</span>
+        </div>
+        <div class="notebook-tag">in progress</div>
+      </div>
+
+      <!-- § 01 Data & Quant -->
+      <div class="entry entry-01">
+        <div class="entry-marker">§ 01</div>
+        <div class="entry-head">
+          <h3 class="entry-title" data-i18n="toolkit.01.title">Data &amp; <em>Quant</em></h3>
+          <span class="entry-meta">Cleaning · Modeling · Inferring</span>
+        </div>
+        <p class="entry-tagline" data-i18n="toolkit.01.tagline">
+          Building structured datasets from messy sources — then asking them the right questions.
+        </p>
+        <div class="entry-content">
+          <div class="code-block">
+<pre class="code-block-body"><span class="code-comment"># dissertation.do — caregiver behaviour profiles</span>
+<span class="code-keyword">import</span> nhats <span class="code-keyword">as</span> panel
+<span class="code-keyword">from</span> stata <span class="code-keyword">import</span> lca, mixed_effects
+
+toolkit = <span class="code-bracket">[</span>
+<span class="code-string">'STATA'</span>, <span class="code-string">'Python'</span>, <span class="code-string">'Excel'</span>, <span class="code-string">'panel data'</span>,
+<span class="code-string">'latent class analysis'</span>, <span class="code-string">'mixed-effects models'</span>
+<span class="code-bracket">]</span>
+
+<span class="code-keyword">def</span> <span class="code-fn">research</span>(caregivers):
+    baseline = caregivers.<span class="code-fn">identify</span>(<span class="code-string">'1,250 baseline caregivers'</span>)
+    long_panel = panel.<span class="code-fn">harmonize</span>(<span class="code-string">'14 NHATS waves'</span>)
+    classes = lca.<span class="code-fn">fit</span>(baseline, indicators=[
+        <span class="code-string">'sleep disorder'</span>, <span class="code-string">'walking'</span>, <span class="code-string">'vigorous activity'</span>
+    ])
+    trajectories = mixed_effects.<span class="code-fn">estimate</span>(
+        outcomes=[<span class="code-string">'depression'</span>, <span class="code-string">'cognition'</span>],
+        group_by=classes
+    )
+    <span class="code-keyword">return</span> trajectories <span class="code-comment"># behaviour profiles linked to health over time</span></pre>
+          </div>
+          <div class="quant-right">
+            <div class="scatter-card">
+  <div class="scatter-figure">
+    <div class="scatter-label">— FIG. 1 · CAREGIVER BEHAVIOURAL PROFILES</div>
+
+    <svg class="scatter-svg" viewBox="0 0 280 140" xmlns="http://www.w3.org/2000/svg">
+      <!-- axes -->
+      <line x1="20" y1="120" x2="270" y2="120" stroke="#5C5A54" stroke-width="0.5" opacity="0.4"/>
+      <line x1="20" y1="120" x2="20" y2="10" stroke="#5C5A54" stroke-width="0.5" opacity="0.4"/>
+
+      <!-- axis labels -->
+      <text x="18" y="135" font-family="Special Elite" font-size="7" fill="#8A8680" letter-spacing="1">LOW ACTIVITY</text>
+      <text x="210" y="135" font-family="Special Elite" font-size="7" fill="#8A8680" letter-spacing="1">HIGH ACTIVITY</text>
+      <text x="5" y="18" font-family="Special Elite" font-size="7" fill="#8A8680" letter-spacing="1" transform="rotate(-90 5 18)">SLEEP DISORDER</text>
+
+      <!-- less healthy profile -->
+      <circle cx="55" cy="42" r="4" fill="#B7655C" opacity="0.78"/>
+      <circle cx="68" cy="55" r="3.6" fill="#B7655C" opacity="0.78"/>
+      <circle cx="82" cy="48" r="4.2" fill="#B7655C" opacity="0.78"/>
+      <circle cx="62" cy="70" r="3.4" fill="#B7655C" opacity="0.78"/>
+      <circle cx="92" cy="66" r="3.8" fill="#B7655C" opacity="0.78"/>
+      <circle cx="75" cy="35" r="3.5" fill="#B7655C" opacity="0.78"/>
+
+      <!-- health-engaged profile -->
+      <circle cx="190" cy="82" r="4" fill="#7A8B5C" opacity="0.78"/>
+      <circle cx="205" cy="92" r="3.6" fill="#7A8B5C" opacity="0.78"/>
+      <circle cx="218" cy="76" r="4.2" fill="#7A8B5C" opacity="0.78"/>
+      <circle cx="232" cy="88" r="3.4" fill="#7A8B5C" opacity="0.78"/>
+      <circle cx="245" cy="70" r="3.8" fill="#7A8B5C" opacity="0.78"/>
+      <circle cx="212" cy="105" r="3.5" fill="#7A8B5C" opacity="0.78"/>
+
+      <!-- trend line -->
+      <path d="M 35 48 Q 120 58, 255 92" stroke="#7A8B5C" stroke-width="1.2" fill="none" opacity="0.45" stroke-dasharray="3 3"/>
+
+      <!-- handwritten labels -->
+      <text x="38" y="30" font-family="Caveat" font-size="11" fill="#3D5A6C" transform="rotate(-4 38 30)">Less healthy</text>
+      <text x="175" y="65" font-family="Caveat" font-size="11" fill="#3D5A6C" transform="rotate(2 175 65)">Health-engaged</text>
+    </svg>
+
+    <div class="scatter-caption">→ 2 behavioural profiles across sleep and activity</div>
+  </div>
+
+  <div class="model-output">
+    <div class="model-output-label">— MODEL OUTPUT</div>
+
+    <div class="model-output-row">
+      <span>Class 1</span>
+      <strong>46.2%</strong>
+      <em>less healthy</em>
+    </div>
+
+    <div class="model-output-row">
+      <span>Class 2</span>
+      <strong>53.8%</strong>
+      <em>health-engaged</em>
+    </div>
+
+    <div class="model-output-note">
+      Linked class membership to depression and cognition across 14 waves.
+    </div>
+  </div>
+</div>
+        <div class="entry-margin-note">
+          <span class="margin-note-label">— Margin Note</span>
+          <p class="margin-note-text" data-i18n="toolkit.01.note">
+            Built a longitudinal NHATS panel from 14 waves; used latent class analysis
+            to identify two caregiver behavioural profiles, then linked class membership
+            through mixed-effects models.
+          </p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- § 02 AI Engineering -->
+      <div class="entry entry-02">
+        <div class="entry-marker">§ 02</div>
+        <div class="entry-head">
+          <h3 class="entry-title" data-i18n="toolkit.02.title">AI <em>Engineering</em></h3>
+          <span class="entry-meta">Prompts · Context · Eval Rubrics</span>
+        </div>
+        <p class="entry-tagline" data-i18n="toolkit.02.tagline">
+           Turning LLMs from open-ended chat into structured, testable product workflows.
+        </p>
+        <div class="entry-content">
+          <div class="chat-block">
+            <div class="chat-row">
+              <div class="chat-role chat-role-user">You ▸</div>
+              <div class="chat-bubble">How do you actually work with LLMs?</div>
+            </div>
+            <div class="chat-divider"></div>
+            <div class="chat-row">
+              <div class="chat-role chat-role-ai">Me ▸</div>
+              <div class="chat-bubble chat-bubble-ai" data-i18n="toolkit.02.reply">
+                <b>As product infrastructure.</b><br>
+                I break vague tasks into prompts, context rules, output formats and evaluation
+                rubrics. For AutoApplyClaw, that meant testing whether an AI-generated CV or
+                cover letter was not only fluent, but specific, structured and reusable across
+                different job descriptions.
+              </div>
+            </div>
+          </div>
+          <div class="tool-cloud">
+            <div>
+              <div class="tool-cloud-label">— INSTRUMENTS</div>
+              <div class="tool-cloud-list">
+                <span class="tool-tag">LLM APIs</span>
+                <span class="tool-tag">Prompt Systems</span>
+                <span class="tool-tag">Eval Rubrics</span>
+                <span class="tool-tag">Claude Code</span>
+                <span class="tool-tag">ChatGPT</span>
+                <span class="tool-tag">NotebookLM</span>
+                <span class="tool-tag">Gemini</span>
+                <span class="tool-tag">Trae</span>
+                <span class="tool-tag">Context Design</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="entry-margin-note">
+          <span class="margin-note-label">— Margin Note</span>
+          <p class="margin-note-text" data-i18n="toolkit.02.note">
+            In AutoApplyClaw, I defined evaluation rubrics for AI-generated
+            CVs and cover letters, then ran 30+ output tests across 20+ prompt
+            iterations to improve JD relevance, structure consistency and
+            formatting reliability.
+          </p>
+        </div>
+      </div>
+
+      <!-- § 03 Product & Research -->
+      <div class="entry entry-03">
+        <div class="entry-marker">§ 03</div>
+        <div class="entry-head">
+          <h3 class="entry-title" data-i18n="toolkit.03.title">Product &amp; <em>Research</em></h3>
+          <span class="entry-meta">SEARCH · CONTENT · CONVERSION</span>
+        </div>
+        <p class="entry-tagline" data-i18n="toolkit.03.tagline">
+          Studying how users discover, compare and trust AI social products before they decide to download.
+        </p>
+        <div class="entry-content">
+          <div class="funnel-wrap">
+            <div class="funnel-wrap-label">— FIG. 2 · AI SOCIAL PRODUCT SEARCH JOURNEY</div>
+            <svg class="funnel-svg" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+              <line x1="105" y1="80" x2="225" y2="80" stroke="#5C5A54" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
+              <line x1="305" y1="80" x2="425" y2="80" stroke="#5C5A54" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
+              <line x1="505" y1="80" x2="625" y2="80" stroke="#5C5A54" stroke-width="1" opacity="0.5" stroke-dasharray="4,3"/>
+              <polygon points="220,80 215,76 215,84" fill="#5C5A54" opacity="0.6"/>
+              <polygon points="420,80 415,76 415,84" fill="#5C5A54" opacity="0.6"/>
+              <polygon points="620,80 615,76 615,84" fill="#5C5A54" opacity="0.6"/>
+              <circle cx="65" cy="80" r="38" fill="rgba(122,139,92,0.12)" stroke="#7A8B5C" stroke-width="1.5"/>
+              <text x="65" y="78" font-family="Playfair Display" font-size="22" font-weight="600" fill="#2C2A26" text-anchor="middle">100+</text>
+              <text x="65" y="93" font-family="Special Elite" font-size="8" fill="#5C5A54" text-anchor="middle" letter-spacing="1">POSTS</text>
+              <text x="65" y="135" font-family="Special Elite" font-size="9" fill="#2C2A26" text-anchor="middle" letter-spacing="1.5" font-weight="700">SCAN</text>
+              <text x="65" y="148" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#5C5A54" text-anchor="middle">top XHS notes</text>
+              <circle cx="265" cy="80" r="38" fill="rgba(168,75,58,0.1)" stroke="#A84B3A" stroke-width="1.5"/>
+              <text x="265" y="78" font-family="Playfair Display" font-size="20" font-weight="600" fill="#2C2A26" text-anchor="middle">5+</text>
+              <text x="265" y="93" font-family="Special Elite" font-size="8" fill="#5C5A54" text-anchor="middle" letter-spacing="1">COMP.</text>
+              <text x="265" y="135" font-family="Special Elite" font-size="9" fill="#2C2A26" text-anchor="middle" letter-spacing="1.5" font-weight="700">COMPARE</text>
+              <text x="265" y="148" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#5C5A54" text-anchor="middle">search layouts</text>
+              <circle cx="465" cy="80" r="38" fill="rgba(61,90,108,0.1)" stroke="#3D5A6C" stroke-width="1.5"/>
+              <text x="465" y="78" font-family="Playfair Display" font-size="20" font-weight="600" fill="#2C2A26" text-anchor="middle">17P</text>
+              <text x="465" y="93" font-family="Special Elite" font-size="8" fill="#5C5A54" text-anchor="middle" letter-spacing="1">REPORT</text>
+              <text x="465" y="135" font-family="Special Elite" font-size="9" fill="#2C2A26" text-anchor="middle" letter-spacing="1.5" font-weight="700">SYNTHESIZE</text>
+              <text x="465" y="148" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#5C5A54" text-anchor="middle">user pain points</text>
+              <circle cx="665" cy="80" r="38" fill="rgba(122,139,92,0.18)" stroke="#5C6B42" stroke-width="2"/>
+              <text x="665" y="78" font-family="Playfair Display" font-size="20" font-weight="600" fill="#5C6B42" text-anchor="middle">10×</text>
+              <text x="665" y="93" font-family="Special Elite" font-size="8" fill="#5C6B42" text-anchor="middle" letter-spacing="1">LIKE LIFT</text>
+              <text x="665" y="135" font-family="Special Elite" font-size="9" fill="#2C2A26" text-anchor="middle" letter-spacing="1.5" font-weight="700">TEST</text>
+              <text x="665" y="148" font-family="Cormorant Garamond" font-style="italic" font-size="11" fill="#5C5A54" text-anchor="middle">content strategy</text>
+            </svg>
+            <div class="funnel-pencil-note pencil-note-1">
+              search behavior<br>→ growth experiment
+            </div>
+          </div>
+          <div class="funnel-tools">
+            <span class="funnel-tools-label">— METHODS:</span>
+            <span class="funnel-tag">XHS Data Analysis</span>
+            <span class="funnel-tag">Search Journey</span>
+            <span class="funnel-tag">Competitive Scan</span>
+            <span class="funnel-tag">Content Testing</span>
+            <span class="funnel-tag">User Feedback</span>
+            <span class="funnel-tag">Growth Metrics</span>
+          </div>
+        </div>
+        <div class="entry-margin-note">
+          <span class="margin-note-label">— Margin Note</span>
+          <p class="margin-note-text" data-i18n="toolkit.03.note">
+            100+ high-exposure Xiaohongshu posts and 5+ competitor searches helped me map the AI social
+            product journey: search curiosity → comparison → download intent. The content strategy was
+            tested through two posts, including one with 10,000+ views and a 10× lift in baseline like rate.
+          </p>
+        </div>
+      </div>
+
+      <!-- § 04 Craft & Comms -->
+      <div class="entry entry-04">
+        <div class="entry-marker">§ 04</div>
+        <div class="entry-head">
+          <h3 class="entry-title" data-i18n="toolkit.04.title">Craft &amp; <em>Comms</em></h3>
+          <span class="entry-meta">WRITING · DECKS · DECISION SUPPORT</span>
+        </div>
+        <p class="entry-tagline" data-i18n="toolkit.04.tagline">
+          Turning market data, company materials and meeting notes into research outputs people can actually use.
+        </p>
+        <div class="entry-content">
+          <div class="index-list">
+            <div class="index-list-label">— INDEX · RESEARCH &amp; CLIENT MATERIALS</div>
+            <div class="index-item">
+            <span class="index-num">i.</span>
+            <span class="index-title" data-i18n="toolkit.04.idx.i">Vaccine batch-release trends</span>
+            <span class="index-dots"></span>
+            <span class="index-page">12 PROV.</span>
+            </div>
+
+            <div class="index-item">
+            <span class="index-num">ii.</span>
+            <span class="index-title" data-i18n="toolkit.04.idx.ii">Listed-company operating review</span>
+            <span class="index-dots"></span>
+            <span class="index-page">3 CO.</span>
+            </div>
+
+            <div class="index-item">
+            <span class="index-num">iii.</span>
+            <span class="index-title" data-i18n="toolkit.04.idx.iii">Research reports &amp; company notes</span>
+            <span class="index-dots"></span>
+            <span class="index-page">8 RPTS</span>
+            </div>
+
+            <div class="index-item">
+            <span class="index-num">iv.</span>
+            <span class="index-title" data-i18n="toolkit.04.idx.iv">Expert interviews &amp; roadshow notes</span>
+            <span class="index-dots"></span>
+            <span class="index-page">20+</span>
+            </div>
+
+            <div class="index-item">
+            <span class="index-num">v.</span>
+            <span class="index-title" data-i18n="toolkit.04.idx.v">Investment materials &amp; market information</span>
+            <span class="index-dots"></span>
+            <span class="index-page">IPO</span>
+            </div>
+
+            <div class="index-item">
+            <span class="index-num">vi.</span>
+            <span class="index-title" data-i18n="toolkit.04.idx.vi">Client-facing investment decks</span>
+            <span class="index-dots"></span>
+            <span class="index-page">5 TASKS</span>
+            </div>
+          </div>
+          <div class="stats-card">
+        <div class="stats-row">
+            <span class="stats-label">Research notes</span>
+            <span class="stats-value">8</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stats-label">Data scope</span>
+            <span class="stats-value stats-value-sm">12 PROV. · 3 CO.</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stats-label">Meetings synthesized</span>
+            <span class="stats-value stats-value-sm">20+</span>
+        </div>
+
+        <div class="stats-row">
+            <span class="stats-label">Readership vs. baseline</span>
+            <span class="stats-value stats-value-sm">+20%</span>
+        </div>
+            <div class="stats-tools">
+            <span class="stats-tool">Excel</span>
+            <span class="stats-tool">PowerPoint</span>
+            <span class="stats-tool">Feishu</span>
+            <span class="stats-tool">Notion</span>
+            <span class="stats-tool">CN / EN</span>
+            <span class="stats-tool">Research Writing</span>
+            </div>
+            <div class="signature-line">
+              <span data-i18n="toolkit.04.sig">written for decisions, not just documentation.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 区块 8：Off the Record - Personal Tarot -->
+  <section id="off-record" class="section off-record">
+
+    <div class="off-record-header">
+      <div class="off-record-eyebrow">
+        <span class="off-record-eyebrow-line"></span>
+        <span class="off-record-eyebrow-label" data-i18n="off.eyebrow">08 — Off the Record</span>
+      </div>
+      <h2 class="off-record-title" data-i18n="off.title">
+        Other than <em>research</em> —
+      </h2>
+      <p class="off-record-sub" data-i18n="off.sub">
+        what's open in my browser when I'm not working.
+      </p>
+      <p class="off-record-hint" data-i18n="off.hint">
+        <span class="off-record-hint-arrow">✦</span>
+        click any card to draw
+      </p>
+    </div>
+
+    <!-- 卡牌牌堆 -->
+    <div class="tarot-deck" data-tarot-deck>
+
+      <!-- Card I — The Persistent (消消乐) -->
+      <button class="tarot-card" type="button" data-tarot-card="persistent" style="--card-i: 0;">
+        <div class="tarot-card-inner">
+          <div class="tarot-card-corner tarot-card-corner-tl">I</div>
+          <div class="tarot-card-symbol">⏳</div>
+          <div class="tarot-card-label" data-i18n="off.card.i">The Persistent</div>
+          <div class="tarot-card-corner tarot-card-corner-br">I</div>
+        </div>
+      </button>
+
+      <!-- Card II — placeholder -->
+      <button class="tarot-card" type="button" data-tarot-card="card2" style="--card-i: 1;">
+        <div class="tarot-card-inner">
+          <div class="tarot-card-corner tarot-card-corner-tl">II</div>
+          <div class="tarot-card-symbol">⚡</div>
+          <div class="tarot-card-label" data-i18n="off.card.ii">The Multitasker</div>
+          <div class="tarot-card-corner tarot-card-corner-br">II</div>
+        </div>
+      </button>
+
+      <!-- Card III — placeholder -->
+      <button class="tarot-card" type="button" data-tarot-card="card3" style="--card-i: 2;">
+        <div class="tarot-card-inner">
+          <div class="tarot-card-corner tarot-card-corner-tl">III</div>
+          <div class="tarot-card-symbol">☕</div>
+          <div class="tarot-card-label" data-i18n="off.card.iii">The Cartographer</div>
+          <div class="tarot-card-corner tarot-card-corner-br">III</div>
+        </div>
+      </button>
+
+      <!-- Card IV — placeholder -->
+      <button class="tarot-card" type="button" data-tarot-card="card4" style="--card-i: 3;">
+        <div class="tarot-card-inner">
+          <div class="tarot-card-corner tarot-card-corner-tl">IV</div>
+          <div class="tarot-card-symbol">🌿</div>
+          <div class="tarot-card-label" data-i18n="off.card.iv">The Life Builder</div>
+          <div class="tarot-card-corner tarot-card-corner-br">IV</div>
+        </div>
+      </button>
+
+      <!-- Card V — placeholder -->
+      <button class="tarot-card" type="button" data-tarot-card="card5" style="--card-i: 4;">
+        <div class="tarot-card-inner">
+          <div class="tarot-card-corner tarot-card-corner-tl">V</div>
+          <div class="tarot-card-symbol">🎨</div>
+          <div class="tarot-card-label" data-i18n="off.card.v">Visual Thinker</div>
+          <div class="tarot-card-corner tarot-card-corner-br">V</div>
+        </div>
+      </button>
+
+      <!-- Card VI — placeholder -->
+      <button class="tarot-card" type="button" data-tarot-card="card6" style="--card-i: 5;">
+        <div class="tarot-card-inner">
+          <div class="tarot-card-corner tarot-card-corner-tl">VI</div>
+          <div class="tarot-card-symbol">🕵️</div>
+          <div class="tarot-card-label" data-i18n="off.card.vi">Goose Detective</div>
+          <div class="tarot-card-corner tarot-card-corner-br">VI</div>
+        </div>
+      </button>
+
+    </div>
+
+    <!-- 卡牌展开后的详情视图 -->
+    <div class="tarot-reveal" data-tarot-reveal aria-hidden="true">
+
+      <!-- Reveal: persistent (消消乐) -->
+      <div class="tarot-reveal-panel" data-reveal-for="persistent">
+        <div class="tarot-reveal-image">
+          <img src="images/card-persistent.png" alt="Puzzle game level 7142 screenshot" />
+        </div>
+        <div class="tarot-reveal-content">
+          <div class="tarot-reveal-roman" data-i18n="off.p1.roman">— Card I —</div>
+          <h3 class="tarot-reveal-title" data-i18n="off.p1.title">7000+ Level Puzzle Player</h3>
+          <span class="tarot-reveal-badge" data-i18n="off.p1.badge">⏳ Persistence</span>
+          <p class="tarot-reveal-body" data-i18n="off.p1.body">
+            Adept at persevering in low-instant-feedback environments,
+            maintaining inner stability, and relying on long-termism to
+            achieve the ultimate goals.
+          </p>
+          <p class="tarot-reveal-quote" data-i18n="off.p1.quote">
+            "Reversed: low feedback, high faith."
+          </p>
+          <button class="tarot-reveal-back" type="button" data-tarot-back data-i18n="off.back">
+            ← Back to Deck
+          </button>
+        </div>
+      </div>
+
+      <!-- Reveal: card2 (演唱会 + 多线并行) -->
+      <div class="tarot-reveal-panel" data-reveal-for="card2">
+        <div class="tarot-reveal-image">
+          <img src="images/card-multitasker.jpg" alt="Concert night" />
+        </div>
+        <div class="tarot-reveal-content">
+          <div class="tarot-reveal-roman" data-i18n="off.p2.roman">— Card II —</div>
+          <h3 class="tarot-reveal-title" data-i18n="off.p2.title">The Multitasker</h3>
+          <span class="tarot-reveal-badge" data-i18n="off.p2.badge">⚡ Parallel Execution</span>
+          <p class="tarot-reveal-body" data-i18n="off.p2.body1">
+            Five deadlines that week. Two unexpected additonal tasks unfinished. One concert ticket I really refused to waste.
+          </p>
+          <p class="tarot-reveal-body" data-i18n="off.p2.body2">
+            I didn't cancel this plan but instead re-planned it. I organized each task into a clear task list, separated the deep work periods from the relaxed editing areas, and made a plan based on fixed travel times. I drafted the slides on the train. I rehearsed the speech before the presentation. I completed the final editing work before entering the concert venue.
+          </p>
+          <p class="tarot-reveal-body" data-i18n="off.p2.body3">
+            That week's experience taught me an important lesson: Multitasking doesn't mean completing all things simultaneously. Instead, it's about arranging the order of stress management so that even if the pace of life speeds up, work can still continue.
+          </p>
+          <p class="tarot-reveal-quote" data-i18n="off.p2.quote">
+            "As long as you negotiate with it, the calendar can make corresponding adjustments for you."
+          </p>
+          <button class="tarot-reveal-back" type="button" data-tarot-back data-i18n="off.back">
+            ← Back to Deck
+          </button>
+        </div>
+      </div>
+
+      <!-- Reveal: card3 (咖啡店地图 · 在地观察) -->
+      <div class="tarot-reveal-panel" data-reveal-for="card3">
+        <div class="tarot-reveal-image">
+          <img src="images/card-cartographer.jpg" alt="A coffee on a cafe table" />
+        </div>
+        <div class="tarot-reveal-content">
+          <div class="tarot-reveal-roman" data-i18n="off.p3.roman">— Card III —</div>
+          <h3 class="tarot-reveal-title" data-i18n="off.p3.title">The Café Cartographer</h3>
+          <span class="tarot-reveal-badge" data-i18n="off.p3.badge">☕ Field Notes</span>
+
+          <div data-i18n="off.p3.bodies">
+            <p class="tarot-reveal-body">
+              Every good idea I have probably started somewhere between a coffee cup, a laptop, and a half-finished to-do list.
+            </p>
+            <p class="tarot-reveal-body">
+              Cafés have become my unofficial thinking rooms. I go there to read papers, rewrite slides, debug messy ideas, and turn scattered thoughts into something structured. Some places are good for deep work. Some are better for people-watching. Some are where I go when my brain needs a reset before it can start again.
+            </p>
+            <p class="tarot-reveal-body">
+              For me, cafés are not escapes from work. They are small stations of attention. I go there to read, write, think, reset, and return to difficult problems with a clearer mind. It is a simple habit, but it carries a larger belief: the right environment can make discipline feel almost gentle.
+            </p>
+          </div>
+
+          <p class="tarot-reveal-quote" data-i18n="off.p3.quote">
+            "A good café does not just serve coffee. It lends me a better version of my mind."
+          </p>
+          <button class="tarot-reveal-back" type="button" data-tarot-back data-i18n="off.back">
+            ← Back to Deck
+          </button>
+        </div>
+      </div>
+
+      <!-- Reveal: card4 (热爱生活 · 做饭 + vlog) -->
+      <div class="tarot-reveal-panel" data-reveal-for="card4">
+        <div class="tarot-reveal-image">
+          <img src="images/card-lifebuilder.png" alt="A home-cooked meal" />
+        </div>
+        <div class="tarot-reveal-content">
+          <div class="tarot-reveal-roman" data-i18n="off.p4.roman">— Card IV —</div>
+          <h3 class="tarot-reveal-title" data-i18n="off.p4.title">The Life Builder</h3>
+          <span class="tarot-reveal-badge" data-i18n="off.p4.badge"> 🌿 Joie de Vivre</span>
+          <p class="tarot-reveal-body" data-i18n="off.p4.body1">
+            I like building a life that gives me energy back.
+          </p>
+          <p class="tarot-reveal-body" data-i18n="off.p4.body2">
+            Outside work and research, I cook, move, climb, walk, and look for small ways to make ordinary days feel fuller. In Singapore, that often means making dinner after a long day, going for a workout when my brain is stuck, finding a trail on the weekend, or saying yes to something slightly outside my comfort zone.
+          </p>
+          <p class="tarot-reveal-body" data-i18n="off.p4.body3">
+          These moments are not separate from who I am professionally. They are how I stay curious, grounded, and ready to begin again. I work better when I live well, and I live better when I keep making space for movement, food, sunlight, and small adventures.
+          </p>
+          <p class="tarot-reveal-links" data-i18n="off.p4.links">
+            <a href="https://b23.tv/pAdZ2B3" target="_blank" rel="noopener" class="tarot-reveal-link">→ Watch the vlog</a>
+            <a href="https://v.douyin.com/zGy5AN14Wfw/ 7@9.com :1pm" target="_blank" rel="noopener" class="tarot-reveal-link">→ Snapshots of the in-between</a>
+          </p>
+          <p class="tarot-reveal-quote" data-i18n="off.p4.quote">
+            "A full life is not a distraction from ambition. It is what keeps ambition alive."
+          </p>
+          <button class="tarot-reveal-back" type="button" data-tarot-back data-i18n="off.back">
+            ← Back to Deck
+          </button>
+        </div>
+      </div>
+
+      <!-- Reveal: card5 (视觉思考者 · PPT / Poster Reel) -->
+    <div class="tarot-reveal-panel visual-thinker-panel" data-reveal-for="card5">
+
+    <div class="visual-reel-wrap">
+        <div class="visual-reel-label" data-i18n="off.p5.reel">— Screenshot Reel · Slides / Posters / Presentation Materials —</div>
+
+        <div class="visual-reel" aria-label="PPT and poster screenshots">
+        <div class="visual-reel-track">
+
+            <!-- 第一组 8 张 -->
+             <button class="visual-frame" type="button" data-visual-src="images/visual-01.png">
+            <img src="images/visual-01.png" alt="PPT and poster screenshot 1">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-02.png">
+            <img src="images/visual-02.png" alt="PPT and poster screenshot 2">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-03.png">
+            <img src="images/visual-03.png" alt="PPT and poster screenshot 3">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-04.png">
+            <img src="images/visual-04.png" alt="PPT and poster screenshot 4">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-05.png">
+            <img src="images/visual-05.png" alt="PPT and poster screenshot 5">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-06.png">
+            <img src="images/visual-06.png" alt="PPT and poster screenshot 6">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-07.png">
+            <img src="images/visual-07.png" alt="PPT and poster screenshot 7">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-08.png">
+            <img src="images/visual-08.png" alt="PPT and poster screenshot 8">
+            </button>
+
+            <!-- 第二组重复一遍，用来实现无缝循环 -->
+            <button class="visual-frame" type="button" data-visual-src="images/visual-01.png" aria-hidden="true">
+            <img src="images/visual-01.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-02.png" aria-hidden="true">
+            <img src="images/visual-02.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-03.png" aria-hidden="true">
+            <img src="images/visual-03.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-04.png" aria-hidden="true">
+            <img src="images/visual-04.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-05.png" aria-hidden="true">
+            <img src="images/visual-05.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-06.png" aria-hidden="true">
+            <img src="images/visual-06.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-07.png" aria-hidden="true">
+            <img src="images/visual-07.png" alt="">
+            </button>
+            <button class="visual-frame" type="button" data-visual-src="images/visual-08.png" aria-hidden="true">
+            <img src="images/visual-08.png" alt="">
+            </button>
+
+        </div>
+        </div>
+    </div>
+
+  <div class="tarot-reveal-content visual-thinker-content">
+    <div class="tarot-reveal-roman" data-i18n="off.p5.roman">— Card V —</div>
+    <h3 class="tarot-reveal-title" data-i18n="off.p5.title">The Visual Thinker</h3>
+    <span class="tarot-reveal-badge" data-i18n="off.p5.badge">🎨 Visual Storytelling</span>
+
+    <p class="tarot-reveal-body" data-i18n="off.p5.body1">
+      I have always liked the moment when messy thinking becomes a clean deck.
+    </p>
+
+    <p class="tarot-reveal-body" data-i18n="off.p5.body2">
+      During my master's, I made slides, research posters, and visual materials
+      for coursework, presentations, and project pitches. I enjoy the process of
+      turning dense content into something structured, readable, and visually
+      coherent: choosing the hierarchy, cutting unnecessary words, arranging
+      evidence, and making every page feel intentional.
+    </p>
+
+    <p class="tarot-reveal-body" data-i18n="off.p5.body3">
+      That habit is close to how I think about products. A good deck, like a
+      good interface, should reduce confusion. It should guide attention,
+      create rhythm, and make the next step feel obvious.
+    </p>
+
+    <p class="tarot-reveal-quote" data-i18n="off.p5.quote">
+      "Beautiful is useful when it helps people understand."
+    </p>
+
+    <button class="tarot-reveal-back" type="button" data-tarot-back data-i18n="off.back">
+      ← Back to Deck
+    </button>
+  </div>
+</div>
+
+      <!-- Reveal: card6 -->
+<div class="tarot-reveal-panel" data-reveal-for="card6">
+  <div class="tarot-reveal-image tarot-reveal-image-goose">
+    <img src="images/goose-record.png" alt="Best record in Goose Goose Duck" />
+  </div>
+
+  <div class="tarot-reveal-content">
+    <div class="tarot-reveal-roman" data-i18n="off.p6.roman">— Card VI —</div>
+    <h3 class="tarot-reveal-title" data-i18n="off.p6.title">The Goose Detective</h3>
+    <span class="tarot-reveal-badge" data-i18n="off.p6.badge">🕵️ Social Deduction</span>
+
+    <p class="tarot-reveal-body" data-i18n="off.p6.body1">
+      I have a soft spot for games that reward a sharp brain and a calm face.
+    </p>
+
+    <p class="tarot-reveal-body" data-i18n="off.p6.body2">
+      Goose Goose Duck is chaotic on the surface, but underneath the noise there
+      is structure. A strange vote, a late accusation, a sentence that feels too
+      polished, a player who suddenly becomes quiet. I like catching those small
+      signals before they become obvious to everyone else.
+    </p>
+
+    <p class="tarot-reveal-body" data-i18n="off.p6.body3">
+      The fun part is not simply winning. It is building a theory with limited
+      information, testing it in real time, and deciding how much to reveal so
+      others will follow your logic without feeling pushed.
+    </p>
+
+    <p class="tarot-reveal-body" data-i18n="off.p6.body4">
+      It is playful, but the skill is real: reading the room, thinking several
+      steps ahead, and making decisions before all the evidence is available.
+    </p>
+
+    <p class="tarot-reveal-quote" data-i18n="off.p6.quote">
+      "The smartest move is not always to speak first. Sometimes it is to notice first."
+    </p>
+
+    <button class="tarot-reveal-back" type="button" data-tarot-back data-i18n="off.back">
+      ← Back to Deck
+    </button>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- ✉ Contact / Closing -->
+    <section id="contact" class="section-contact">
+    <div class="contact-divider"></div>
+    
+    <div class="contact-inner">
+        <div class="contact-icon">📩</div>
+        <h2 class="contact-title" data-i18n="contact.title">Want to know more?</h2>
+        <p class="contact-desc" data-i18n="contact.desc">
+        More projects, process stories, or just tea about
+        <em>AI × behavioral science</em> — I'd love to chat.
+        </p>
+        
+        <div class="contact-actions">
+            <a href="mailto:chengjunhui1216@outlook.com" class="contact-btn contact-btn-primary" data-i18n="contact.btn.email">
+                Let's talk <span class="arrow">→</span>
+            </a>
+            <a href="https://www.linkedin.com/in/junhui-cheng-896214379"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-btn contact-btn-secondary"
+                data-i18n="contact.btn.linkedin">
+                Get in touch <span class="arrow">→</span>
+            </a>
+            <button type="button"
+                    class="contact-btn contact-btn-secondary contact-btn-wechat"
+                    data-wechat="13912286425">
+                <span class="wechat-icon" aria-hidden="true">💬</span>
+                <span class="wechat-label">WeChat</span>
+                <span class="wechat-feedback" data-i18n="contact.wechat.feedback">✓ Copied!</span>
+            </button>
+            </div>
+    </div>
+    </section>
+
+  <footer class="footer">
+    <p data-i18n="footer.copy">© 2026 Junhui · Built with curiosity and AI</p>
+  </footer>
+
+</div>
+
+<!-- Founders Story Modal -->
+<div class="story-modal" id="storyModal" aria-hidden="true">
+  <div class="story-modal-backdrop" data-close-story></div>
+
+  <div class="story-modal-dialog" role="dialog" aria-modal="true" aria-label="A Note from the Founders">
+    <button class="story-modal-close" type="button" aria-label="Close founders story" data-close-story>
+      ×
+    </button>
+
+    <img
+      src="images/founders-story.jpeg"
+      alt="A Note from the Founders of AutoApplyClaw"
+      class="story-modal-image"
+    >
+  </div>
+</div>
+
+<!-- Visual Reel Image Modal -->
+<div class="visual-modal" id="visualModal" aria-hidden="true">
+  <div class="visual-modal-backdrop" data-close-visual></div>
+
+  <div class="visual-modal-dialog" role="dialog" aria-modal="true" aria-label="Visual work preview">
+    <button class="visual-modal-close" type="button" aria-label="Close visual preview" data-close-visual>
+      ×
+    </button>
+
+    <img
+      src=""
+      alt="Selected PPT or poster screenshot"
+      class="visual-modal-image"
+      id="visualModalImage"
+    >
+  </div>
+</div>
+
+<!-- 右下角 AI 聊天按钮 & 窗口 -->
+<button class="chat-btn" id="chatBtn" title="Chat with AI-Me" aria-label="Chat with AI-Me">💬</button>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-header">
+    <div>
+      <div class="chat-kicker" data-i18n="chat.kicker">Ask the portfolio</div>
+      <div class="chat-title" data-i18n="chat.title">AI-Junhui</div>
+      <div class="chat-status" data-i18n="chat.status">● Online</div>
+    </div>
+    <button class="chat-close" id="chatClose" type="button" aria-label="Close chat">×</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="msg msg-ai" data-i18n="chat.welcome">
+      Hi! I'm an AI version of Junhui 👋<br>
+      Ask me about my research, projects, or experience.
+    </div>
+  </div>
+
+  <div class="chat-input-wrap">
+    <input type="text" id="chatInput" data-i18n-placeholder="chat.placeholder" placeholder="Ask about Junhui..." />
+    <button id="chatSend" type="button" aria-label="Send message">→</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+    (function() {
+      const phrasesMap = {
+        en: [
+          "Behavioral Scientist",
+          "Data Storyteller",
+          "Product Builder",
+          "Curious Explorer",
+          "Human-Centered Thinker"
+        ],
+        zh: [
+          "行为科学研究者",
+          "数据叙事者",
+          "产品构建者",
+          "好奇的探索者",
+          "以人为本的思考者"
+        ]
+      };
+      const el = document.getElementById('typewriter');
+      if (!el) return;
+      let lang = localStorage.getItem('lang') || 'en';
+      let phraseIdx = 0, charIdx = 0, isDeleting = false, timer = null;
+
+      function phrases() { return phrasesMap[lang] || phrasesMap.en; }
+
+      function tick() {
+        const current = phrases()[phraseIdx];
+        if (!isDeleting) {
+          el.textContent = current.substring(0, charIdx + 1);
+          charIdx++;
+          if (charIdx === current.length) {
+            isDeleting = true;
+            timer = setTimeout(tick, 1500);
+            return;
+          }
+          timer = setTimeout(tick, 70 + Math.random() * 40);
+        } else {
+          el.textContent = current.substring(0, charIdx - 1);
+          charIdx--;
+          if (charIdx === 0) {
+            isDeleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases().length;
+            timer = setTimeout(tick, 350);
+            return;
+          }
+          timer = setTimeout(tick, 30);
+        }
+      }
+
+      window.switchTWLang = function(newLang) {
+        lang = newLang;
+        clearTimeout(timer);
+        phraseIdx = 0; charIdx = 0; isDeleting = false;
+        el.textContent = '';
+        timer = setTimeout(tick, 150);
+      };
+
+      tick();
+    })();
+  </script>
+  <script>
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navBrand = document.querySelector('.nav-brand');
+  const observedSections = Array.from(
+  document.querySelectorAll('#top, #about, #journey, #built, #research, #leadership, #toolkit, #off-record, #contact')
+ );
+
+  const setActiveLink = (id) => {
+  navLinks.forEach(link => {
+    const isActive = link.getAttribute('href') === `#${id}`;
+    link.classList.toggle('active', isActive);
+  });
+
+  if (navBrand) {
+    navBrand.classList.toggle('active', id === 'top');
+  }
+};
+
+  const updateActiveNavOnScroll = () => {
+  /*
+    到页面最底部时，Contact 区域很短，屏幕判断点可能还落在 Off Record。
+    所以先单独判断：如果已经接近页面底部，直接高亮 Contact。
+  */
+  const scrollBottom = window.scrollY + window.innerHeight;
+  const pageHeight = document.documentElement.scrollHeight;
+  const isNearBottom = scrollBottom >= pageHeight - 80;
+
+  if (isNearBottom) {
+    setActiveLink('contact');
+    return;
+  }
+
+  /*
+    平时滚动时，用屏幕中线上方一点的位置判断当前区块。
+  */
+  const checkpoint = window.innerHeight * 0.38;
+
+  let currentSectionId = observedSections[0]?.id;
+
+  observedSections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top <= checkpoint && rect.bottom >= checkpoint) {
+      currentSectionId = section.id;
+    }
+  });
+
+  if (currentSectionId) {
+    setActiveLink(currentSectionId);
+  }
+};
+
+  window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
+  window.addEventListener('resize', updateActiveNavOnScroll);
+  window.addEventListener('load', updateActiveNavOnScroll);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      setActiveLink(targetId);
+
+      setTimeout(updateActiveNavOnScroll, 500);
+    });
+  });
+
+  if (navBrand) {
+  navBrand.addEventListener('click', () => {
+    setActiveLink('top');
+    setTimeout(updateActiveNavOnScroll, 500);
+  });
+}
+
+  updateActiveNavOnScroll();
+</script>
+<script>
+  const storyTrigger = document.querySelector('.story-trigger');
+  const storyModal = document.querySelector('#storyModal');
+  const storyCloseButtons = document.querySelectorAll('[data-close-story]');
+
+  const openStoryModal = () => {
+    storyModal.classList.add('is-open');
+    storyModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('story-modal-open');
+  };
+
+  const closeStoryModal = () => {
+    storyModal.classList.remove('is-open');
+    storyModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('story-modal-open');
+  };
+
+  if (storyTrigger && storyModal) {
+    storyTrigger.addEventListener('click', openStoryModal);
+  }
+
+  storyCloseButtons.forEach(button => {
+    button.addEventListener('click', closeStoryModal);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && storyModal.classList.contains('is-open')) {
+      closeStoryModal();
+    }
+  });
+</script>
+<script>
+  // 微信号一键复制
+  document.querySelectorAll('.contact-btn-wechat').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const wechat = btn.dataset.wechat;
+      if (!wechat) return;
+
+      try {
+        // 现代浏览器
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(wechat);
+        } else {
+          // 兜底：老浏览器 / http 环境
+          const ta = document.createElement('textarea');
+          ta.value = wechat;
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          document.execCommand('copy');
+          document.body.removeChild(ta);
+        }
+
+        // 显示 ✓ Copied! 1.6 秒
+        btn.classList.add('is-copied');
+        clearTimeout(btn._copyTimer);
+        btn._copyTimer = setTimeout(() => {
+          btn.classList.remove('is-copied');
+        }, 1600);
+      } catch (err) {
+        // 极端兜底：弹个小提示让用户手动复制
+        alert('微信号:' + wechat);
+      }
+    });
+  });
+</script>
+<script>
+  // Leadership Index：点击展开/收起
+  document.querySelectorAll('[data-leader-item]').forEach(item => {
+    const btn = item.querySelector('.leader-index-row');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      // 可选：一次只开一条（手风琴）。要保留多开就把这块删掉。
+      if (isOpen) {
+        document.querySelectorAll('[data-leader-item].is-open').forEach(other => {
+          if (other !== item) {
+            other.classList.remove('is-open');
+            other.querySelector('.leader-index-row')
+              ?.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  });
+</script>
+<script>
+  // Off the Record — Tarot deck 展开/收起
+  (function() {
+    const deck = document.querySelector('[data-tarot-deck]');
+    const reveal = document.querySelector('[data-tarot-reveal]');
+    if (!deck || !reveal) return;
+
+    const cards = deck.querySelectorAll('[data-tarot-card]');
+    const panels = reveal.querySelectorAll('.tarot-reveal-panel');
+    const backBtns = reveal.querySelectorAll('[data-tarot-back]');
+
+    function showCard(key) {
+      // 隐藏牌堆
+      deck.classList.add('is-hidden');
+      reveal.classList.add('is-active');
+      reveal.setAttribute('aria-hidden', 'false');
+
+      // 切换面板
+      panels.forEach(p => {
+        const match = p.getAttribute('data-reveal-for') === key;
+        p.classList.toggle('is-active', match);
+      });
+
+      // 滚到 reveal 顶部，体验更好
+      reveal.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function backToDeck() {
+      deck.classList.remove('is-hidden');
+      reveal.classList.remove('is-active');
+      reveal.setAttribute('aria-hidden', 'true');
+      panels.forEach(p => p.classList.remove('is-active'));
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        const key = card.getAttribute('data-tarot-card');
+        showCard(key);
+      });
+    });
+
+    backBtns.forEach(btn => {
+      btn.addEventListener('click', backToDeck);
+    });
+  })();
+</script>
+<script>
+  // Visual Thinker — click reel image to preview
+  (function() {
+    const frames = document.querySelectorAll('.visual-frame');
+    const modal = document.getElementById('visualModal');
+    const modalImg = document.getElementById('visualModalImage');
+    const closeBtns = document.querySelectorAll('[data-close-visual]');
+
+    if (!frames.length || !modal || !modalImg) return;
+
+    function openVisual(src) {
+      modalImg.src = src;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('visual-modal-open');
+    }
+
+    function closeVisual() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('visual-modal-open');
+      modalImg.src = '';
+    }
+
+    frames.forEach(frame => {
+      frame.addEventListener('click', () => {
+        const src = frame.getAttribute('data-visual-src');
+        if (src) openVisual(src);
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', closeVisual);
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeVisual();
+      }
+    });
+  })();
+</script>
+<script src="i18n.js"></script>
+<script>
+  (function () {
+    const oldInput = document.getElementById('chatInput');
+    const oldSend = document.getElementById('chatSend');
+    const chatMessages = document.getElementById('chatMessages');
+
+    if (!oldInput || !oldSend || !chatMessages) return;
+
+    // 关键：克隆 input 和 send 按钮，移除 script.js 之前绑定过的旧事件
+    const chatInput = oldInput.cloneNode(true);
+    const chatSend = oldSend.cloneNode(true);
+
+    oldInput.parentNode.replaceChild(chatInput, oldInput);
+    oldSend.parentNode.replaceChild(chatSend, oldSend);
+
+    function getChatLang() {
+      return document.documentElement.lang === 'zh-CN' ? 'zh' : 'en';
+    }
+
+    function addChatMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.className = sender === 'user' ? 'msg msg-user' : 'msg msg-ai';
+      msg.innerHTML = text;
+      chatMessages.appendChild(msg);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function sendFixedDevReply() {
+      const userText = chatInput.value.trim();
+      if (!userText) return;
+
+      addChatMessage(userText, 'user');
+      chatInput.value = '';
+
+      setTimeout(() => {
+        const lang = getChatLang();
+
+        const reply = lang === 'zh'
+          ? '这个功能现在还在开发中 👷‍♀️<br>目前只是作品集里的互动展示。'
+          : 'This feature is still under development 👷‍♀️<br>For now, it is an interactive portfolio demo.';
+
+        addChatMessage(reply, 'ai');
+      }, 350);
+    }
+
+    chatSend.addEventListener('click', sendFixedDevReply);
+
+    chatInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        sendFixedDevReply();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
