@@ -5200,3 +5200,14 @@ html:lang(zh-CN) .tarot-reveal-quote {
   font-style: normal;
   font-weight: 500;
 }
+
+.flagship-link-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.flagship-link-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
