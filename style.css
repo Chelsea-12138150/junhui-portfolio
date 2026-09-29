@@ -211,6 +211,12 @@ html {
   opacity: 0.8;
 }
 
+/* 核心板块（Built / Toolkit）：提高视觉权重 */
+.nav-link.nav-link-key {
+  font-weight: 700;
+  color: var(--ink);
+}
+
 .lang-toggle {
   display: inline-flex;
   align-items: center;
@@ -2686,8 +2692,8 @@ html {
   color: var(--ink);
 }
 
-/* ===== Entry 01: Data & Quant ===== */
-.entry-01 .entry-content {
+/* ===== Entry 02: Data & Quant ===== */
+.entry-02 .entry-content {
   display: grid;
   grid-template-columns: 1.25fr 1fr;
   gap: 32px;
@@ -2700,7 +2706,7 @@ html {
   width: 100%;
 }
 
-.entry-01 .entry-margin-note {
+.entry-02 .entry-margin-note {
   margin-top: 0;
   max-width: none;
   width: 100%;
@@ -2836,8 +2842,8 @@ html {
   transform-origin: left;
 }
 
-/* ===== Entry 02: AI Engineering ===== */
-.entry-02 .entry-content {
+/* ===== Entry 03: AI Engineering ===== */
+.entry-03 .entry-content {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 32px;
@@ -2943,8 +2949,8 @@ html {
   background: rgba(255, 252, 244, 0.95);
 }
 
-/* ===== Entry 03: Product & Research ===== */
-.entry-03 .entry-content {
+/* ===== Entry 04: Product & Research ===== */
+.entry-04 .entry-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
@@ -3007,8 +3013,8 @@ html {
   border-radius: 99px;
 }
 
-/* ===== Entry 04: Craft & Comms ===== */
-.entry-04 .entry-content {
+/* ===== Entry 05: Craft & Comms ===== */
+.entry-05 .entry-content {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 36px;
@@ -3124,6 +3130,207 @@ html {
   opacity: 0.6;
 }
 
+/* ===== Entry 01: Product & Delivery ===== */
+.entry-01 .entry-content {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+/* ---- 需求看板 ---- */
+.board-wrap {
+  position: relative;
+}
+.board-label {
+  font-family: 'Special Elite', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--olive);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.board {
+  display: grid;
+  grid-template-columns: 1fr 18px 1fr 18px 1fr;
+  gap: 6px;
+  align-items: start;
+}
+.board-col {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 10px 9px 12px;
+  background: rgba(250, 247, 238, 0.75);
+  border: 1px solid rgba(122, 139, 92, 0.2);
+  border-radius: 4px;
+}
+.board-col-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+  padding-bottom: 8px;
+  margin-bottom: 2px;
+  border-bottom: 1px dashed rgba(122, 139, 92, 0.32);
+}
+.board-col-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.board-col-count {
+  font-family: 'Special Elite', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.1em;
+  color: var(--olive);
+  white-space: nowrap;
+}
+.board-arrow {
+  align-self: center;
+  padding-top: 34px;
+  font-size: 13px;
+  color: var(--olive-light);
+  text-align: center;
+}
+
+/* 单张需求卡 */
+.board-ticket {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 7px 9px;
+  background: white;
+  border: 1px solid rgba(44, 42, 38, 0.1);
+  border-left-width: 2.5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px -3px rgba(44, 42, 38, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.board-ticket:hover {
+  transform: translateX(2px);
+  box-shadow: 0 5px 12px -6px rgba(44, 42, 38, 0.28);
+}
+.board-ticket-tag {
+  font-family: 'Special Elite', monospace;
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+}
+.board-ticket-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+.board-ticket-p0 { border-left-color: #B7655C; }
+.board-ticket-p0 .board-ticket-tag { color: #A0483E; }
+.board-ticket-p1 { border-left-color: #BA7517; }
+.board-ticket-p1 .board-ticket-tag { color: #8A5410; }
+.board-ticket-p2 { border-left-color: var(--olive-light); }
+.board-ticket-p2 .board-ticket-tag { color: var(--olive); }
+.board-ticket-spec { border-left-color: #3D5A6C; }
+.board-ticket-spec .board-ticket-tag { color: #3D5A6C; }
+.board-ticket-done {
+  border-left-color: #5C6B42;
+  background: rgba(122, 139, 92, 0.07);
+}
+.board-ticket-done .board-ticket-tag { color: #4A5730; }
+
+/* 铅笔批注 */
+.board-pencil-note {
+  position: absolute;
+  right: -6px;
+  bottom: -30px;
+  font-family: 'Caveat', cursive;
+  font-size: 15px;
+  line-height: 1.25;
+  color: var(--olive);
+  opacity: 0.8;
+  transform: rotate(-3deg);
+  text-align: right;
+  pointer-events: none;
+}
+
+/* ---- 右侧：判断标准 ---- */
+.criteria-card {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 20px;
+  background: rgba(250, 247, 238, 0.6);
+  border: 1px solid rgba(122, 139, 92, 0.22);
+  border-radius: 4px;
+}
+.criteria-label {
+  font-family: 'Special Elite', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--olive);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.criteria-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dotted rgba(122, 139, 92, 0.3);
+}
+.criteria-q {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.criteria-a {
+  flex-shrink: 0;
+  font-family: 'Special Elite', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 1px solid;
+}
+.criteria-a-p0 { color: #A0483E; border-color: rgba(183, 101, 92, 0.5); background: rgba(183, 101, 92, 0.08); }
+.criteria-a-p1 { color: #8A5410; border-color: rgba(186, 117, 23, 0.45); background: rgba(186, 117, 23, 0.08); }
+.criteria-a-p2 { color: var(--olive); border-color: rgba(122, 139, 92, 0.45); background: rgba(122, 139, 92, 0.08); }
+
+.criteria-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(44, 42, 38, 0.15);
+}
+.criteria-card .signature-line {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+/* ---- Entry 01 移动端 ---- */
+@media (max-width: 900px) {
+  .entry-01 .entry-content { grid-template-columns: 1fr; }
+  .board {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .board-arrow {
+    padding-top: 0;
+    transform: rotate(90deg);
+  }
+  .board-pencil-note {
+    position: static;
+    text-align: left;
+    transform: none;
+    margin-top: 14px;
+  }
+}
+
 /* ==========================================
    Footer
    ========================================== */
@@ -3165,7 +3372,9 @@ html {
 .chat-window {
   position: fixed;
   bottom: 100px; right: 32px;
-  width: 360px; height: 500px;
+  width: 380px;
+  height: 580px;
+  max-height: calc(100vh - 140px);
   background: white;
   border-radius: 20px;
   box-shadow: 0 20px 50px -10px rgba(44, 42, 38, 0.25);
@@ -3264,6 +3473,80 @@ html {
   transition: transform 0.2s;
 }
 #chatSend:hover { transform: scale(1.08); }
+
+/* ---- 预置问答区 ---- */
+.chat-qa-wrap {
+  flex-shrink: 0;
+  max-height: 38%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px 12px;
+  border-top: 1px solid rgba(44, 42, 38, 0.08);
+  background: white;
+}
+.chat-qa-label {
+  flex-shrink: 0;
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 9px;
+  opacity: 0.85;
+}
+.chat-qa-list {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 2px;
+}
+.chat-qa-list::-webkit-scrollbar { width: 4px; }
+.chat-qa-list::-webkit-scrollbar-thumb {
+  background: rgba(122, 139, 92, 0.28);
+  border-radius: 99px;
+}
+.chat-qa-item {
+  text-align: left;
+  padding: 9px 13px;
+  background: var(--cream-light);
+  border: 1px solid rgba(122, 139, 92, 0.22);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+.chat-qa-item:hover {
+  background: rgba(122, 139, 92, 0.1);
+  border-color: var(--olive);
+  color: var(--ink);
+  transform: translateX(2px);
+}
+
+/* 打字动画的三个点 */
+.chat-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 0;
+}
+.chat-dots i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--olive);
+  opacity: 0.45;
+  animation: chatDot 1.1s infinite ease-in-out;
+}
+.chat-dots i:nth-child(2) { animation-delay: 0.16s; }
+.chat-dots i:nth-child(3) { animation-delay: 0.32s; }
+@keyframes chatDot {
+  0%, 60%, 100% { opacity: 0.32; transform: translateY(0); }
+  30%           { opacity: 0.9;  transform: translateY(-3px); }
+}
 
 /* ==========================================
    动画定义
@@ -3430,9 +3713,9 @@ html {
   .entry-marker { left: 24px; }
   .entry-head { flex-direction: column; gap: 4px; }
   .entry-title { font-size: 26px; }
-  .entry-01 .entry-content,
   .entry-02 .entry-content,
-  .entry-04 .entry-content { grid-template-columns: 1fr; }
+  .entry-03 .entry-content,
+  .entry-05 .entry-content { grid-template-columns: 1fr; }
   .funnel-svg { height: auto; min-height: 160px; }
   .pencil-note-1 { display: none; }
   .section-title { font-size: 36px; }
@@ -3629,12 +3912,11 @@ html {
   .built-cta-card { padding: 40px 24px; }
   .built-cta-title { font-size: 28px; }
 
-  /* ===== 强制修复 AutoApplyClaw 卡片布局 ===== */
+  /* ===== AutoApplyClaw 卡片布局补充 =====
+     display / grid-template-columns / gap 已在上方 .flagship-card 定义，
+     此处只补 align-items，不再重复声明。 */
 .flagship-card {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 60px !important;
-  align-items: stretch !important;
+  align-items: stretch;
 }
 
 .flagship-left,
@@ -3646,7 +3928,6 @@ html {
 .flagship-right {
   display: block !important;   /* 覆盖之前可能残留的 flex */
 }
-
 /* ========== Research Card - 小红书爆款展示 ========== */
 
 /* research-card 复用 flagship-card 的所有样式，这里只调整差异 */
@@ -3671,14 +3952,10 @@ html {
   z-index: 0;
 }
 
-.xhs-stack {
-  position: relative;
-  z-index: 1;    /* 让卡片浮在装饰背景上 */
-}
-
 /* 右侧小红书卡片容器 */
 .xhs-stack {
   position: relative;
+  z-index: 1;             /* 让卡片浮在装饰背景上 */
   width: 70%;
   max-width: 230px;
   margin: 0 auto;
@@ -3812,44 +4089,17 @@ html {
   margin-bottom: 0;         /* 底部不留空隙，因为没 CTA 了 */
 }
 
-/* ========== Section 底部 CTA ========== */
-.section-cta-wrap {
-  max-width: 1100px;
-  margin: 40px auto 80px;
-  padding: 0 56px;
-  text-align: right;
+/* 收紧作品区与下一节标题之间的留白 */
+.built {
+  padding-bottom: 64px;
 }
 
-.section-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--olive);
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 1px solid rgba(122, 139, 92, 0.3);
-  border-radius: 100px;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.3, 1);
-  letter-spacing: 0.02em;
+.built > .industry-card:last-of-type {
+  margin-bottom: 0;
 }
 
-.section-cta:hover {
-  background: var(--olive);
-  color: var(--cream);
-  border-color: var(--olive);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px -10px rgba(122, 139, 92, 0.5);
-}
-
-.section-cta:hover .arrow {
-  transform: translateX(4px);
-}
-
-.section-cta .arrow {
-  transition: transform 0.3s;
+.research {
+  padding-top: 64px;
 }
 
 /* ========== Contact / Closing Section ========== */
@@ -5210,4 +5460,528 @@ html:lang(zh-CN) .tarot-reveal-quote {
 .flagship-link-card:hover {
   text-decoration: none;
   color: inherit;
+}
+
+/* ==========================================
+   🐧 Tencent Featured Case（Things I've Built 内）
+   复用 flagship-card / chip 体系，以下仅为新增布局样式
+   ========================================== */
+.tencent-case {
+  display: block !important;
+  grid-template-columns: none !important;
+  gap: 0 !important;
+}
+
+.tencent-case .flagship-title {
+  font-size: 34px;
+  line-height: 1.15;
+}
+
+.tencent-case .flagship-desc {
+  max-width: 780px;
+}
+
+/* ---- 量化指标 ---- */
+.tx-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 4px 0 36px;
+}
+.tx-metric {
+  background: white;
+  border: 1px solid rgba(122, 139, 92, 0.14);
+  border-radius: 6px;
+  padding: 16px 18px 14px;
+  transition: all 0.3s ease;
+}
+.tencent-case:hover .tx-metric {
+  border-color: rgba(122, 139, 92, 0.3);
+}
+.tx-metric-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--olive);
+  line-height: 1.1;
+}
+.tx-metric-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 6px;
+}
+.tx-metric-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-top: 2px;
+}
+
+/* ---- FIG. 0 · 产品闭环示意图 ---- */
+.tx-loop {
+  margin: 4px 0 22px;
+  padding: 22px 26px 16px;
+  background: rgba(250, 247, 238, 0.55);
+  border: 1px solid rgba(122, 139, 92, 0.16);
+  border-radius: 6px;
+}
+.tx-loop-label {
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: var(--olive);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.85;
+}
+.tx-loop-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- 脱敏口径说明（取代原大段导语，压到最小） ---- */
+.tx-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  line-height: 1.65;
+  color: var(--ink-light);
+  margin: 0 0 22px;
+  padding-left: 12px;
+  border-left: 1.5px solid rgba(122, 139, 92, 0.28);
+  max-width: 640px;
+}
+.tx-note b { color: var(--ink-soft); font-weight: 600; }
+
+/* ---- 三个 Product Stories ---- */
+.tx-stories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.tx-story {
+  background: white;
+  border: 1px solid rgba(122, 139, 92, 0.12);
+  border-radius: 6px;
+  transition: border-color 0.4s cubic-bezier(0.2, 0.8, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.2, 0.8, 0.3, 1),
+              transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.tx-story:hover {
+  transform: translateY(-3px);
+  border-color: var(--olive-light);
+  box-shadow:
+    0 2px 4px rgba(44, 42, 38, 0.05),
+    0 18px 36px -16px rgba(122, 139, 92, 0.28);
+}
+.tx-story.is-open {
+  border-color: rgba(122, 139, 92, 0.45);
+  transform: none;
+}
+
+/* 卡头整体是按钮：默认摘要视图 */
+.tx-story-head {
+  display: block;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 24px 22px 18px;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.tx-story-head:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.tx-story-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #3D5A6C; /* 站内 Toolkit 漏斗图已有的钢蓝色，极小面积点缀 tech 感 */
+  margin-bottom: 10px;
+}
+.tx-story-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 3px;
+}
+.tx-story-sub {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+/* 每卡一张手绘感示意图 */
+.tx-viz {
+  margin: 0 0 16px;
+  padding: 10px 12px 8px;
+  background: rgba(245, 241, 232, 0.6);
+  border: 1px solid rgba(122, 139, 92, 0.14);
+  border-radius: 5px;
+}
+.tx-viz svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 问题 / 做法 / 结果 三行摘要 */
+.tx-tldr {
+  margin: 0;
+  padding-top: 4px;
+  border-top: 1px solid rgba(122, 139, 92, 0.14);
+}
+.tx-tldr-row {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(122, 139, 92, 0.08);
+}
+.tx-tldr-row:last-child { border-bottom: 0; }
+.tx-tldr dt {
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--olive);
+  padding-top: 3px;
+  line-height: 1.5;
+}
+.tx-tldr dd {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.tx-tldr dd b { color: var(--ink); font-weight: 600; }
+
+/* "How I built it" 展开提示 */
+.tx-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(122, 139, 92, 0.14);
+}
+.tx-more-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--olive);
+}
+.tx-more-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border: 1px solid rgba(122, 139, 92, 0.32);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  line-height: 1;
+  color: var(--olive);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.tx-story:hover .tx-more-icon {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: var(--cream);
+}
+.tx-story.is-open .tx-more-icon {
+  background: var(--olive);
+  border-color: var(--olive);
+  color: var(--cream);
+  transform: rotate(45deg);
+}
+
+/* 折叠的执行细节区 */
+.tx-story-detail {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.tx-story.is-open .tx-story-detail {
+  grid-template-rows: 1fr;
+}
+.tx-story-detail-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding: 0 22px;
+}
+.tx-story.is-open .tx-story-detail-inner {
+  padding-bottom: 22px;
+}
+
+.tx-points {
+  list-style: none;
+  margin: 0 0 14px;
+  padding-top: 4px;
+}
+.tx-points li {
+  position: relative;
+  padding-left: 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+.tx-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 6px;
+  height: 1.5px;
+  background: var(--olive);
+}
+.tx-points li b { color: var(--ink); font-weight: 600; }
+
+/* ---- AutoApplyClaw：四条核心产品动作 ---- */
+.aac-tldr {
+  margin: 16px 0 18px;
+  padding-top: 4px;
+  border-top: 1px solid rgba(122, 139, 92, 0.16);
+}
+.aac-tldr-row {
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(122, 139, 92, 0.08);
+}
+.aac-tldr-row:last-child { border-bottom: 0; }
+.aac-tldr dt {
+  font-family: 'Special Elite', 'JetBrains Mono', monospace;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--olive);
+  padding-top: 3px;
+  line-height: 1.5;
+}
+.aac-tldr dd {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.aac-tldr dd b { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 520px) {
+  .aac-tldr-row { grid-template-columns: 64px 1fr; gap: 9px; }
+}
+
+/* ---- 创始团队手记入口 ---- */
+.aac-story-trigger-wrap {
+  display: flex;
+  justify-content: center;
+  margin: -8px 0 26px;
+}
+.aac-story-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 20px;
+  background: rgba(245, 241, 232, 0.75);
+  border: 1px dashed rgba(122, 139, 92, 0.4);
+  border-radius: 100px;
+  cursor: pointer;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 14.5px;
+  color: var(--olive);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+.aac-story-trigger:hover {
+  background: rgba(122, 139, 92, 0.1);
+  border-color: var(--olive);
+  border-style: solid;
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+.aac-story-trigger-icon {
+  font-size: 13px;
+  opacity: 0.75;
+}
+.aac-story-trigger-arrow {
+  font-size: 13px;
+  transition: transform 0.3s ease;
+}
+.aac-story-trigger:hover .aac-story-trigger-arrow {
+  transform: translateX(3px);
+}
+
+/* ---- 轻量流程条（保留给其他复用场景） ---- */
+.tx-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin: 2px 0 14px;
+}
+.tx-flow-step {
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 100px;
+  background: rgba(122, 139, 92, 0.08);
+  border: 1px solid rgba(122, 139, 92, 0.2);
+  color: var(--olive);
+  line-height: 1.5;
+}
+.tx-flow-arrow {
+  color: var(--olive-light);
+  font-size: 11px;
+}
+
+/* ---- story 底部 chips（复用 .chip） ---- */
+.tx-story-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+/* ---- 预留截图位（HTML 中默认注释，启用时直接生效） ---- */
+.tx-media {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+.tx-media-item { margin: 0; }
+.tx-media-item img {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(122, 139, 92, 0.15);
+  display: block;
+}
+.tx-media-item figcaption {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: var(--ink-light);
+  text-align: center;
+  margin-top: 6px;
+}
+
+/* ---- Tencent case 响应式 ---- */
+@media (max-width: 900px) {
+  .tencent-case .flagship-title { font-size: 26px; }
+  .tx-metrics { grid-template-columns: repeat(2, 1fr); }
+  .tx-stories { grid-template-columns: 1fr; }
+  .tx-media { grid-template-columns: 1fr; }
+  .tx-loop { padding: 18px 16px 12px; }
+  .tx-story-head { padding: 20px 18px 16px; }
+  .tx-story-detail-inner { padding: 0 18px; }
+  .tx-story.is-open .tx-story-detail-inner { padding-bottom: 18px; }
+}
+@media (max-width: 520px) {
+  .tx-metric-num { font-size: 24px; }
+  .tx-tldr-row { grid-template-columns: 54px 1fr; gap: 8px; }
+  .tx-note { font-size: 11px; }
+}
+
+/* AutoApplyClaw：桌面端左右双栏，减少截图占据的纵向篇幅 */
+.aac-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1.05fr);
+  gap: 36px;
+  align-items: center;
+  padding: 40px 44px;
+}
+.aac-card .flagship-desc { margin-bottom: 14px; }
+.aac-card .aac-tldr { margin: 10px 0 14px; }
+.aac-card .flagship-chips { margin-bottom: 18px; }
+.aac-card .flagship-right {
+  display: flex !important;
+  align-items: center;
+}
+.aac-card .browser-mockup { width: 100%; }
+
+@media (max-width: 760px) {
+  .aac-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 24px;
+  }
+}
+
+.aac-story-trigger-inline {
+  margin-top: 2px;
+  background: transparent;
+}
+
+.aac-site-link {
+  display: block;
+  width: 100%;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.aac-site-link:hover,
+.aac-site-link:focus-visible {
+  color: inherit;
+  text-decoration: none;
+}
+.aac-site-link:focus-visible {
+  outline: 2px solid var(--olive);
+  outline-offset: 6px;
+  border-radius: 10px;
+}
+.aac-site-hint {
+  display: block;
+  margin-top: 20px;
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--olive);
+  transition: transform 0.25s ease;
+}
+.aac-site-link:hover .aac-site-hint { transform: translateX(4px); }
+
+/* AI 社交产品：只作用于 Things I've Built 中的同名卡片 */
+.built .flagship-card.research-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+  gap: 36px;
+  align-items: center;
+  padding: 40px 44px;
+}
+.built .flagship-card.research-card .flagship-desc { margin-bottom: 18px; }
+.built .flagship-card.research-card .flagship-chips { margin-bottom: 20px; }
+
+@media (max-width: 760px) {
+  .built .flagship-card.research-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 32px 24px;
+  }
 }

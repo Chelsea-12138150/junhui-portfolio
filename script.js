@@ -40,7 +40,7 @@ let conversationHistory = [];
 // 打开/关闭聊天窗口
 chatBtn.addEventListener("click", () => {
   chatWindow.classList.toggle("open");
-  if (chatWindow.classList.contains("open")) {
+  if (chatWindow.classList.contains("open") && chatInput) {
     chatInput.focus();
   }
 });
@@ -50,6 +50,7 @@ chatClose.addEventListener("click", () => {
 
 // 发送消息
 function sendMessage() {
+  if (!chatInput) return;
   const text = chatInput.value.trim();
   if (!text) return;
 
@@ -77,10 +78,14 @@ function sendMessage() {
 }
 
 // 按回车发送
-chatInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") sendMessage();
-});
-chatSend.addEventListener("click", sendMessage);
+if (chatInput) {
+  chatInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") sendMessage();
+  });
+}
+if (chatSend) {
+  chatSend.addEventListener("click", sendMessage);
+}
 
 // 在聊天窗口里添加一条消息
 function addMessage(text, type, isTyping = false) {
